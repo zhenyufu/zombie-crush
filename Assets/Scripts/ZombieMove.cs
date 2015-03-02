@@ -3,11 +3,12 @@ using System.Collections;
 
 public class ZombieMove : MonoBehaviour {
 
-	public static float bottom = 5f;
+	public static GameObject plane;// = GameObject.Find("Plane");
 	public float speed = 2f;
 	// Use this for initialization
 	void Start () {
-		speed = Random.Range (0.0f, 4.0f);
+		speed = Random.Range (1.0f, 4.0f);
+		plane = GameObject.Find("Plane");
 	}
 	
 	// Update is called once per frame
@@ -17,7 +18,7 @@ public class ZombieMove : MonoBehaviour {
 		pos.z += speed * Time.deltaTime;
 		transform.position = pos;
 
-		if ( transform.position.z > bottom ) {
+		if ( transform.position.z > ZombieFactory.start ) {
 			Destroy( this.gameObject ); 			
 		}
 
