@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 2b55249b17b7043839918490717fd5e3
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - carPrefab: {fileID: 100002, guid: 427fe2c3f3b8b44bd90daadccf705572, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
