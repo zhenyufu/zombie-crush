@@ -21,11 +21,8 @@ public class CarFactory : MonoBehaviour {
 			{
 				Vector3 newPosition = hit.point;
 				GameObject car=Instantiate( carPrefab ) as GameObject;
-				carPrefab.transform.position=new Vector3(5f, 0f, newPosition.z);
+				car.transform.position=new Vector3(5f, 0f, newPosition.z);
 			}
-			/*Vector3 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-			GameObject car=Instantiate( carPrefab ) as GameObject;
-			carPrefab.transform.position=new Vector3(5f, 0f, target.z);*/
 		}
 	}
 }
