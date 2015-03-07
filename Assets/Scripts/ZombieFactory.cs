@@ -27,7 +27,7 @@ public class ZombieFactory : MonoBehaviour {
 	void makeZombie(){
 		GameObject zombie = Instantiate( zombiePrefab ) as GameObject;
 
-		zombie.transform.position = new Vector3(Random.Range(-width, width),0,-start);
+		zombie.transform.position = new Vector3(Random.Range(-width, width),0.5f,start);
 
 	}
 

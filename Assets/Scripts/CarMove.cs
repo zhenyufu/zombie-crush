@@ -4,10 +4,9 @@ using System.Collections;
 public class CarMove : MonoBehaviour {
 
 	public static GameObject plane;// = GameObject.Find("Plane");
-	public float speed = 2f;
+	public float speed = 4f;
 	// Use this for initialization
 	void Start () {
-		speed = Random.Range (1.0f, 4.0f);
 		plane = GameObject.Find("Plane");
 	}
 	
@@ -17,7 +16,23 @@ public class CarMove : MonoBehaviour {
 		Vector3 pos = transform.position;
 		pos.x -= speed * Time.deltaTime;
 		transform.position = pos;
-		
+
+
+		if ( transform.position.x < -6f ) {
+			Destroy( this.gameObject ); 			
+		}
 		
 	}
+
+	/*
+	void OnTriggerEnter(Collider other){
+		if(other.gameObject.tag == "Zombie"){
+			//other.gameObject.SetActive(false);
+			print ("hit!!");
+		}
+	}
+	*/
+
+
+
 }

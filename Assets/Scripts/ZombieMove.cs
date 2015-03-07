@@ -15,10 +15,10 @@ public class ZombieMove : MonoBehaviour {
 	void Update () {
 	
 		Vector3 pos = transform.position;
-		pos.z += speed * Time.deltaTime;
+		pos.z -= speed * Time.deltaTime;
 		transform.position = pos;
 
-		if ( transform.position.z > ZombieFactory.start ) {
+		if ( transform.position.z < -ZombieFactory.start ) {
 			Destroy( this.gameObject ); 			
 		}
 
