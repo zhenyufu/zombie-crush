@@ -24,14 +24,14 @@ public class CarMove : MonoBehaviour {
 		
 	}
 
-	/*
+
 	void OnTriggerEnter(Collider other){
 		if(other.gameObject.tag == "Zombie"){
-			//other.gameObject.SetActive(false);
-			print ("hit!!");
+			Destroy(other.gameObject);
+			Destroy( this.gameObject );
 		}
 	}
-	*/
+
 
 
 
