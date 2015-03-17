@@ -7,7 +7,6 @@ public class ZombieMove : MonoBehaviour {
 	public float speed = 2f;
 	// Use this for initialization
 	void Start () {
-		speed = Random.Range (1.0f, 4.0f);
 		plane = GameObject.Find("Plane");
 	}
 	

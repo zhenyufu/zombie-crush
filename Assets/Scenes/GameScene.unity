@@ -467,8 +467,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd71a5deb50b9142b14b84b0c8c1b73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombiePrefab: {fileID: 107626, guid: 157c898296b6f4e4fbc681d6242505f5, type: 2}
-  time: 1
+  zombieType1: {fileID: 192698, guid: 954aff0fb1026471c9906083b72558b4, type: 2}
+  zombieType2: {fileID: 100386, guid: fce3728ff3b4645ffb11fbbe2ba74011, type: 2}
+  time: 4
+  widthOffset: 1
+  spwanRange: 2
 --- !u!114 &1837825623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -480,4 +483,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b55249b17b7043839918490717fd5e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carPrefab: {fileID: 116928, guid: 1eef4880942f84bc78e8f54e0dd4e5a7, type: 2}
+  carPrefab: {fileID: 153030, guid: 1eef4880942f84bc78e8f54e0dd4e5a7, type: 2}
+  z: 0

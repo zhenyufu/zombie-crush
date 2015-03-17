@@ -18,7 +18,7 @@ public class CarMove : MonoBehaviour {
 		transform.position = pos;
 
 
-		if ( transform.position.x < -6f ) {
+		if ( transform.position.x < -10f ) {
 			Destroy( this.gameObject ); 			
 		}
 		
@@ -29,6 +29,8 @@ public class CarMove : MonoBehaviour {
 		if(other.gameObject.tag == "Zombie"){
 			Destroy(other.gameObject);
 			Destroy( this.gameObject );
+			ScoreBoard.DestoyOneZombie();
+			print(ScoreBoard.CurrentScore());
 		}
 	}
 
