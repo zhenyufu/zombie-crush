@@ -485,3 +485,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carPrefab: {fileID: 153030, guid: 1eef4880942f84bc78e8f54e0dd4e5a7, type: 2}
   z: 0
+  carRate: 1
