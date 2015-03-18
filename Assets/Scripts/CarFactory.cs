@@ -11,14 +11,19 @@ public class CarFactory : MonoBehaviour {
 	private Vector2 endPos;
 	private bool isleftSwipe;
 	public  float carRate=1f;
-	private float nextCar=0f;
+	//private float nextCar=0f;
+	private float currentTime = 0f;// interval 
+
 	// Use this for initialization
 	void Start () {
 		isleftSwipe = false;
 	}
 	
 	// Update is called once per frame
+
 	void Update () {
+		currentTime += Time.deltaTime;
+
 	if (Input.touchCount > 0) {
 			Touch touch=Input.GetTouch(0);
 								if (touch.phase == TouchPhase.Began) {
@@ -40,8 +45,9 @@ public class CarFactory : MonoBehaviour {
 				RaycastHit hit2;
 				Ray ray2 = Camera.main.ScreenPointToRay (startPos);
 				if (Physics.Raycast (ray2, out hit2)) {
-					if(Time.time>nextCar){
-					nextCar=Time.time+carRate;
+					if(currentTime >= carRate){
+						currentTime = 0;
+
 					Vector3 newPosition = hit2.point;
 					GameObject car = Instantiate (carPrefab) as GameObject;
 					if (newPosition.z <= 20f && newPosition.z > 15f) {
@@ -90,9 +96,9 @@ public class CarFactory : MonoBehaviour {
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			if (Physics.Raycast(ray, out hit))
 			{
-				if(Time.time>nextCar){
-				nextCar=Time.time+carRate;/////////////////////////////////////////////// this will go over the max float at one time
-				//Debug.Log (nextCar);
+				if(currentTime >= carRate){
+					currentTime = 0;
+
 				Vector3 newPosition = hit.point;
 				GameObject car=Instantiate( carPrefab ) as GameObject;
 				
@@ -138,6 +144,9 @@ public class CarFactory : MonoBehaviour {
 			}
 		}
 
-
-	}
+		// make sure that currentTime doesn't grow too big
+		if (currentTime > 100f) {
+			currentTime = carRate;
+		}
+	}// end of update
 }
