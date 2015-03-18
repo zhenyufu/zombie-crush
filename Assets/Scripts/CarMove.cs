@@ -5,6 +5,7 @@ public class CarMove : MonoBehaviour {
 
 	public static GameObject plane;// = GameObject.Find("Plane");
 	public float speed = 4f;
+	public AudioClip crash;
 	// Use this for initialization
 	void Start () {
 		plane = GameObject.Find("Plane");
@@ -27,12 +28,15 @@ public class CarMove : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
 		if(other.gameObject.tag == "Zombie"){
+			AudioSource.PlayClipAtPoint(crash, collider.transform.position, 1f);
+
 			Destroy(other.gameObject);
 			Destroy( this.gameObject );
 			ScoreBoard.DestoyOneZombie();
 			print(ScoreBoard.CurrentScore());
 		}
 	}
+
 
 
 
