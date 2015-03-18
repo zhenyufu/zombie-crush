@@ -91,7 +91,8 @@ public class CarFactory : MonoBehaviour {
 			if (Physics.Raycast(ray, out hit))
 			{
 				if(Time.time>nextCar){
-					nextCar=Time.time+carRate;
+				nextCar=Time.time+carRate;/////////////////////////////////////////////// this will go over the max float at one time
+				//Debug.Log (nextCar);
 				Vector3 newPosition = hit.point;
 				GameObject car=Instantiate( carPrefab ) as GameObject;
 				
