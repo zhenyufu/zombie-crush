@@ -33,7 +33,7 @@ public class CarMove : MonoBehaviour {
 			Destroy(other.gameObject);
 			Destroy( this.gameObject );
 			ScoreBoard.DestoyOneZombie();
-			print(ScoreBoard.CurrentScore());
+			//print(ScoreBoard.CurrentScore());
 		}
 	}
 
