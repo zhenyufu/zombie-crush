@@ -47,6 +47,7 @@ public class CarFactory : MonoBehaviour {
 				if (Physics.Raycast (ray2, out hit2)) {
 					if(currentTime >= carRate){
 						currentTime = 0;
+						ScoreBoard.fire();
 
 					Vector3 newPosition = hit2.point;
 					GameObject car = Instantiate (carPrefab) as GameObject;
@@ -98,7 +99,7 @@ public class CarFactory : MonoBehaviour {
 			{
 				if(currentTime >= carRate){
 					currentTime = 0;
-
+					ScoreBoard.fire();
 				Vector3 newPosition = hit.point;
 				GameObject car=Instantiate( carPrefab ) as GameObject;
 				

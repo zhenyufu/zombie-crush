@@ -6,11 +6,15 @@ using UnityEngine.UI;
 public class Displayui : MonoBehaviour {
 
 	static Text displayScore;
+	static Text displayFuel;
+
 
 	// Use this for initialization
 	void Start () {
 		//update the ui score
-		displayScore = GameObject.Find("Fuel").GetComponent<Text>(); 
+		displayScore = GameObject.Find("Score").GetComponent<Text>(); 
+
+		displayFuel = GameObject.Find("Fuel").GetComponent<Text>(); 
 		//Debug.Log (displayScore);
 
 	}
@@ -23,7 +27,7 @@ public class Displayui : MonoBehaviour {
 
 	public static void refresh(){
 		displayScore.text = ScoreBoard.CurrentScore().ToString();
-
+		displayFuel.text = ScoreBoard.CurrentFuel().ToString();
 	}
 
 
