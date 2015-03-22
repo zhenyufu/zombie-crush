@@ -861,6 +861,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1261971214}
   - 95: {fileID: 1261971215}
+  - 114: {fileID: 1261971216}
   m_Layer: 0
   m_Name: fuel3
   m_TagString: Untagged
@@ -875,7 +876,7 @@ Transform:
   m_PrefabInternal: {fileID: 2077105088}
   m_GameObject: {fileID: 1261971213}
   m_LocalRotation: {x: 4.21669775e-08, y: .965925813, z: .258819044, w: -1.573693e-07}
-  m_LocalPosition: {x: 4.98000002, y: 2, z: 15.0100002}
+  m_LocalPosition: {x: 4.98000002, y: 2.49000001, z: 14.6599998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1012972896}
@@ -905,6 +906,17 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1261971216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1261971213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7777daf9fa7b0824dbf785926b84da20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1343361710
 GameObject:
   m_ObjectHideFlags: 0
@@ -1332,11 +1344,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: b4667fcb8f08beb439eda9d7732ede3a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 2.49000001
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: b4667fcb8f08beb439eda9d7732ede3a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 15.0100002
+      value: 14.6599998
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: b4667fcb8f08beb439eda9d7732ede3a, type: 3}
       propertyPath: m_LocalRotation.x

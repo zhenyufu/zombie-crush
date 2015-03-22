@@ -5,22 +5,12 @@
 [https://trello.com/b/Z7mr7inl/zombie-crush](https://trello.com/b/Z7mr7inl/zombie-crush)
 
 
-### How do I get set up? ###
+### Music###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+* DarkMystery from http://audionautix.com/
 
-### Contribution guidelines ###
 
-* Writing tests
-* Code review
-* Other guidelines
+### Sound ###
 
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+* https://www.freesound.org/
+	Creative Commons 0 Licence
