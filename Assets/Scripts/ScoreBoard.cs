@@ -7,7 +7,7 @@ public static class ScoreBoard {
 	// Use this for initialization
 	private static int score;
 	private static int fuel = 50;
-
+	private static int TotalFuel=50;
 	// Update is called once per frame
 	public static void DestoyOneZombie(){
 		score++;
@@ -30,6 +30,8 @@ public static class ScoreBoard {
 		Displayui.refresh();
 	}
 
-
+	public static void reload(){
+		fuel = TotalFuel;
+	}
 
 }

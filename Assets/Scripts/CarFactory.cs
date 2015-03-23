@@ -22,6 +22,11 @@ public class CarFactory : MonoBehaviour {
 	// Update is called once per frame
 
 	void Update () {
+		if((ScoreBoard.CurrentFuel() == 0 )&& (GameObject.FindGameObjectWithTag("Car") == null)) {
+			ScoreBoard.reload();
+			Application.LoadLevel("WinScene");
+		}
+
 		currentTime += Time.deltaTime;
 
 	if (Input.touchCount > 0) {
@@ -45,7 +50,7 @@ public class CarFactory : MonoBehaviour {
 				RaycastHit hit2;
 				Ray ray2 = Camera.main.ScreenPointToRay (startPos);
 				if (Physics.Raycast (ray2, out hit2)) {
-					if(currentTime >= carRate){
+					if(currentTime >= carRate && ScoreBoard.CurrentFuel()>0){
 						currentTime = 0;
 						ScoreBoard.fire();
 
@@ -97,7 +102,7 @@ public class CarFactory : MonoBehaviour {
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			if (Physics.Raycast(ray, out hit))
 			{
-				if(currentTime >= carRate){
+				if(currentTime >= carRate && ScoreBoard.CurrentFuel()>0){
 					currentTime = 0;
 					ScoreBoard.fire();
 				Vector3 newPosition = hit.point;
