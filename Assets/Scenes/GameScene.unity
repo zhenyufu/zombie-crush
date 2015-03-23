@@ -1301,7 +1301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b55249b17b7043839918490717fd5e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carPrefab: {fileID: 153030, guid: 1eef4880942f84bc78e8f54e0dd4e5a7, type: 2}
+  carPrefab: {fileID: 144068, guid: da22257fc191fae419f9280a1987fa74, type: 2}
   z: 0
   carRate: 1
 --- !u!1 &1954613189

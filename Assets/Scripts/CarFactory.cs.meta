@@ -3,7 +3,7 @@ guid: 2b55249b17b7043839918490717fd5e3
 MonoImporter:
   serializedVersion: 2
   defaultReferences:
-  - carPrefab: {fileID: 116928, guid: 1eef4880942f84bc78e8f54e0dd4e5a7, type: 2}
+  - carPrefab: {fileID: 144068, guid: da22257fc191fae419f9280a1987fa74, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
