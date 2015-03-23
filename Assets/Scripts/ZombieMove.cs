@@ -18,7 +18,8 @@ public class ZombieMove : MonoBehaviour {
 		transform.position = pos;
 
 		if ( transform.position.z < -ZombieFactory.start ) {
-			Destroy( this.gameObject ); 			
+			Destroy( this.gameObject ); 
+			ScoreBoard.fire();
 		}
 
 

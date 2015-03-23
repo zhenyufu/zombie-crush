@@ -4,29 +4,29 @@ using System.Collections;
 public class ZombieFactory : MonoBehaviour {
 
 	public static GameObject plane;
-	public static float start = 5f; 
-	public static float width = 5f;
+	public static float start = 20f; 
+	public static float width = 8.95f;
 
 	public GameObject zombieType1;
 	public GameObject zombieType2;
-	public float time = 1f;
-	public float widthOffset=0f;
+	public float time = 3f;
+	public float widthOffset=1f;
 	public float spwanRange=2f;
 	private float spwanRangeExtend;
 	// Use this for initialization
 	void Start () {
 		InvokeRepeating("makeZombie", 1f, time);
 		plane = GameObject.Find("Plane");
-		start = start * plane.transform.localScale.z;
-		width = width * plane.transform.localScale.x;
+		//start = 20f //start * plane.transform.localScale.z;
+		//width = 8.95f //width * plane.transform.localScale.x;
+		//print ("start: " +start);
+		//print ("width: " + width);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
 	}
-
-
 
 	void makeZombie(){
 		int currentScore = ScoreBoard.CurrentScore ();
@@ -38,7 +38,7 @@ public class ZombieFactory : MonoBehaviour {
 
 				
 
-	}
+			}
 
 	 void ZombieSpawner(int currentScore){
 		if (spwanRangeExtend + spwanRange < 2*width - widthOffset) {

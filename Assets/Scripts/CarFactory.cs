@@ -22,7 +22,7 @@ public class CarFactory : MonoBehaviour {
 	// Update is called once per frame
 
 	void Update () {
-		if((ScoreBoard.CurrentFuel() == 0 )&& (GameObject.FindGameObjectWithTag("Car") == null)) {
+		if((ScoreBoard.CurrentFuel() <= 0 )&& (GameObject.FindGameObjectWithTag("Car") == null)) {
 			ScoreBoard.reload();
 			Application.LoadLevel("WinScene");
 		}

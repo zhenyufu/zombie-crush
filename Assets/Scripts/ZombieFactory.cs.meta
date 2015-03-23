@@ -3,7 +3,8 @@ guid: 6fd71a5deb50b9142b14b84b0c8c1b73
 MonoImporter:
   serializedVersion: 2
   defaultReferences:
-  - zombiePrefab: {fileID: 107626, guid: 157c898296b6f4e4fbc681d6242505f5, type: 2}
+  - zombieType1: {fileID: 192698, guid: 954aff0fb1026471c9906083b72558b4, type: 2}
+  - zombieType2: {fileID: 100386, guid: fce3728ff3b4645ffb11fbbe2ba74011, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
