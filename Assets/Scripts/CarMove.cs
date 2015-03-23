@@ -29,10 +29,11 @@ public class CarMove : MonoBehaviour {
 	void OnTriggerEnter(Collider other){
 		if(other.gameObject.tag == "Zombie"){
 			AudioSource.PlayClipAtPoint(crash, collider.transform.position, 1f);
-
-			Destroy(other.gameObject);
+			other.animation.CrossFade("Dead",0.2f);
+			Destroy(other.gameObject,1.3f);   
 			Destroy( this.gameObject );
 			ScoreBoard.DestoyOneZombie();
+
 			//print(ScoreBoard.CurrentScore());
 		}
 	}
