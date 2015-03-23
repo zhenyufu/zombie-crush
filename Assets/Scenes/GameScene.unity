@@ -2341,7 +2341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombieType1: {fileID: 199444, guid: e18787f3a58ba574dbef69e23df56af1, type: 2}
-  zombieType2: {fileID: 100386, guid: fce3728ff3b4645ffb11fbbe2ba74011, type: 2}
+  zombieType2: {fileID: 176068, guid: 9529badda5a3dd3429ee8f126456e99a, type: 2}
   time: 3
   widthOffset: 1
   spwanRange: 2
