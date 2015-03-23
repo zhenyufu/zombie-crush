@@ -1,0 +1,321 @@
+fileFormatVersion: 2
+guid: fbcbc2e64570acd43bdc87a3f5557a54
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Armature|arm.L
+    100004: Armature|arm.R
+    100006: Armature|Bone
+    100008: Armature|leg.L
+    100010: Armature|leg.R
+    100012: Cube
+    100014: Cube.001
+    100016: Cube.002
+    100018: Cube.003
+    100020: Cube.004
+    100022: Cube.005
+    100024: //RootNode
+    400000: Armature
+    400002: Armature|arm.L
+    400004: Armature|arm.R
+    400006: Armature|Bone
+    400008: Armature|leg.L
+    400010: Armature|leg.R
+    400012: Cube
+    400014: Cube.001
+    400016: Cube.002
+    400018: Cube.003
+    400020: Cube.004
+    400022: Cube.005
+    400024: //RootNode
+    2300000: Cube
+    2300002: Cube.001
+    2300004: Cube.002
+    2300006: Cube.004
+    2300008: Cube.005
+    3300000: Cube
+    3300002: Cube.001
+    3300004: Cube.002
+    3300006: Cube.004
+    3300008: Cube.005
+    4300000: Cube.004
+    4300002: Cube.002
+    4300004: Cube.005
+    4300006: Cube.001
+    4300008: Cube.003
+    4300010: Cube
+    6400000: Cube
+    6400002: Cube.001
+    6400004: Cube.002
+    6400006: Cube.004
+    6400008: Cube.005
+    7400000: Walk
+    7400002: Dead
+    7400004: Armature|Dead
+    7400006: Armature|Walk
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: Cube.003
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Walk
+      takeName: Walk
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Armature|arm.L
+        weight: 1
+      - path: Armature/Armature|arm.R
+        weight: 1
+      - path: Armature/Armature|Bone
+        weight: 1
+      - path: Armature/Armature|leg.L
+        weight: 1
+      - path: Armature/Armature|leg.R
+        weight: 1
+      - path: Armature/Cube.001
+        weight: 1
+      - path: Armature/Cube.002
+        weight: 1
+      - path: Armature/Cube.004
+        weight: 1
+      - path: Armature/Cube.005
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Cube.003
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Dead
+      takeName: Dead
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Armature|arm.L
+        weight: 1
+      - path: Armature/Armature|arm.R
+        weight: 1
+      - path: Armature/Armature|Bone
+        weight: 1
+      - path: Armature/Armature|leg.L
+        weight: 1
+      - path: Armature/Armature|leg.R
+        weight: 1
+      - path: Armature/Cube.001
+        weight: 1
+      - path: Armature/Cube.002
+        weight: 1
+      - path: Armature/Cube.004
+        weight: 1
+      - path: Armature/Cube.005
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Cube.003
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Armature|Dead
+      takeName: Armature|Dead
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Armature|arm.L
+        weight: 1
+      - path: Armature/Armature|arm.R
+        weight: 1
+      - path: Armature/Armature|Bone
+        weight: 1
+      - path: Armature/Armature|leg.L
+        weight: 1
+      - path: Armature/Armature|leg.R
+        weight: 1
+      - path: Armature/Cube.001
+        weight: 1
+      - path: Armature/Cube.002
+        weight: 1
+      - path: Armature/Cube.004
+        weight: 1
+      - path: Armature/Cube.005
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Cube.003
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Armature|Walk
+      takeName: Armature|Walk
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Armature|arm.L
+        weight: 1
+      - path: Armature/Armature|arm.R
+        weight: 1
+      - path: Armature/Armature|Bone
+        weight: 1
+      - path: Armature/Armature|leg.L
+        weight: 1
+      - path: Armature/Armature|leg.R
+        weight: 1
+      - path: Armature/Cube.001
+        weight: 1
+      - path: Armature/Cube.002
+        weight: 1
+      - path: Armature/Cube.004
+        weight: 1
+      - path: Armature/Cube.005
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Cube.003
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 
