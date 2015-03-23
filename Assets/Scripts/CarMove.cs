@@ -7,13 +7,13 @@ public class CarMove : MonoBehaviour
 	public static GameObject plane;// = GameObject.Find("Plane");
 	public float speed = 4f;
 	public AudioClip crash;
-	//bool collided;
+	bool collided;
 
 	// Use this for initialization
 	void Start ()
 	{
 		plane = GameObject.Find ("Plane");
-		//collided = false;
+		collided = false;
 	}
 	
 	// Update is called once per frame
@@ -29,28 +29,30 @@ public class CarMove : MonoBehaviour
 			Destroy (this.gameObject); 			
 		}
 
-		/*if (collided) {
+		if (collided) {
 			if (Time.fixedTime % .5 < .2) {
 				this.renderer.enabled = false;
 			} else {
 				this.renderer.enabled = true;
 			}
-		}*/
+		}
 	}
 
 	void OnTriggerEnter (Collider other)
 	{
 		if (other.gameObject.tag == "Zombie") {
+			disableCollider();
+
 			AudioSource.PlayClipAtPoint (crash, collider.transform.position, 1f);
 
 			ZombieMove zmScript = other.GetComponent<ZombieMove> ();
 			zmScript.afterCollide ();
 			other.animation.CrossFade ("Dead", 0.2f);
 
-			//collided = true;
+			collided = true;
 			//InvokeRepeating ("CarBlink", 0f, 1f);
 			Destroy (other.gameObject, 1.3f);   
-			Destroy(this.gameObject);
+			Destroy(this.gameObject,0.8f);
 			//yield return new WaitForSeconds (1f);
 
 			ScoreBoard.DestoyOneZombie ();
@@ -59,10 +61,18 @@ public class CarMove : MonoBehaviour
 		}
 	}
 
-	/*IEnumerator CarBlink ()
+	  IEnumerator CarBlink ()
 	{
 		renderer.enabled = false;
 		yield return new WaitForSeconds (0.5f);
 		renderer.enabled = true;
-	}*/
+	}
+
+	void disableCollider()
+	{
+		foreach (Collider c in GetComponents<Collider>())
+		{
+			c.enabled = false;
+		}
+	}
 }
