@@ -31,9 +31,9 @@ public class CarMove : MonoBehaviour
 
 		/*if (collided) {
 			if (Time.fixedTime % .5 < .2) {
-				renderer.enabled = false;
+				this.renderer.enabled = false;
 			} else {
-				renderer.enabled = true;
+				this.renderer.enabled = true;
 			}
 		}*/
 	}
@@ -50,7 +50,7 @@ public class CarMove : MonoBehaviour
 			//collided = true;
 			//InvokeRepeating ("CarBlink", 0f, 1f);
 			Destroy (other.gameObject, 1.3f);   
-			Destroy(this.gameObject,1.3f);
+			Destroy(this.gameObject);
 			//yield return new WaitForSeconds (1f);
 
 			ScoreBoard.DestoyOneZombie ();
@@ -59,10 +59,10 @@ public class CarMove : MonoBehaviour
 		}
 	}
 
-	IEnumerator CarBlink ()
+	/*IEnumerator CarBlink ()
 	{
 		renderer.enabled = false;
 		yield return new WaitForSeconds (0.5f);
 		renderer.enabled = true;
-	}
+	}*/
 }
