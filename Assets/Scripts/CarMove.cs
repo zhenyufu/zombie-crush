@@ -7,13 +7,13 @@ public class CarMove : MonoBehaviour
 	public static GameObject plane;// = GameObject.Find("Plane");
 	public float speed = 4f;
 	public AudioClip crash;
-	bool collided;
+	//bool collided;
 
 	// Use this for initialization
 	void Start ()
 	{
 		plane = GameObject.Find ("Plane");
-		collided = false;
+		//collided = false;
 	}
 	
 	// Update is called once per frame
@@ -29,13 +29,13 @@ public class CarMove : MonoBehaviour
 			Destroy (this.gameObject); 			
 		}
 
-		if (collided = true) {
+		/*if (collided) {
 			if (Time.fixedTime % .5 < .2) {
 				renderer.enabled = false;
 			} else {
 				renderer.enabled = true;
 			}
-		}
+		}*/
 	}
 
 	void OnTriggerEnter (Collider other)
@@ -47,7 +47,7 @@ public class CarMove : MonoBehaviour
 			zmScript.afterCollide ();
 			other.animation.CrossFade ("Dead", 0.2f);
 
-			collided = true;
+			//collided = true;
 			//InvokeRepeating ("CarBlink", 0f, 1f);
 			Destroy (other.gameObject, 1.3f);   
 			Destroy(this.gameObject,1.3f);
