@@ -49,12 +49,11 @@ public class CarFactory : MonoBehaviour {
 										}
 								} else {
 										//Upward Swipe
-										if ((endPos.y - startPos.y) > 0) {
+				
 												isupSwipe = true;
 
 											
 
-										}
 								}
 						}
 						startPos = endPos;
