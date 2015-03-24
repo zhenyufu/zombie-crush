@@ -13,7 +13,7 @@ GameObject:
   - 65: {fileID: 6504450}
   m_Layer: 0
   m_Name: zombie_2hard
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -632,7 +632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3934c793723e2f48bf36521aa960a2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 4
 --- !u!137 &13776092
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
