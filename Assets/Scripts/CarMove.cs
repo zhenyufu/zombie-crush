@@ -40,16 +40,17 @@ public class CarMove : MonoBehaviour
 
 	void OnTriggerEnter (Collider other)
 	{
+		Debug.Log (other.gameObject.tag);
 		if (other.gameObject.tag == "Zombie") {
-			disableCollider();
-
+			//disableCollider();
+			Debug.Log ("collide");
 			AudioSource.PlayClipAtPoint (crash, collider.transform.position, 1f);
 
-			ZombieMove zmScript = other.GetComponent<ZombieMove> ();
-			zmScript.afterCollide ();
-			other.animation.CrossFade ("Dead", 0.2f);
+			//ZombieMove zmScript = other.GetComponent<ZombieMove> ();
+			//zmScript.afterCollide ();
+			//other.animation.CrossFade ("Dead", 0.2f);
 
-			collided = true;
+			//collided = true;
 			//InvokeRepeating ("CarBlink", 0f, 1f);
 			Destroy (other.gameObject, 1.3f);   
 			Destroy(this.gameObject,0.8f);
