@@ -19,7 +19,6 @@ public class CarMove : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		
 		Vector3 pos = transform.position;
 		pos.x -= speed * Time.deltaTime;
 		transform.position = pos;
@@ -28,15 +27,31 @@ public class CarMove : MonoBehaviour
 		if (transform.position.x < -10f) {
 			Destroy (this.gameObject); 			
 		}
-
+		/*
 		if (collided) {
 			if (Time.fixedTime % .5 < .2) {
 				this.renderer.enabled = false;
 			} else {
 				this.renderer.enabled = true;
 			}
+		}*/
+	}
+
+
+	void OnCollisionEnter(Collision collision) {
+		if (collision.gameObject.tag == "Zombie") {
+			AudioSource.PlayClipAtPoint (crash, collider.transform.position, 1f);
+			Destroy (collision.gameObject, 1.3f);   
+			Destroy(this.gameObject,0.8f);
+			ScoreBoard.DestoyOneZombie ();
+
+			ZombieMove zmScript = collision.gameObject.GetComponent<ZombieMove> ();
+			zmScript.afterCollide ();
 		}
 	}
+
+
+
 
 	void OnTriggerEnter (Collider other)
 	{
