@@ -50,7 +50,7 @@ public class CarFactory : MonoBehaviour {
 								} else {
 										//Upward Swipe
 				
-												isupSwipe = true;
+										isupSwipe = true;
 
 											
 
@@ -108,7 +108,7 @@ public class CarFactory : MonoBehaviour {
 										if (currentTime >= tankRate && ScoreBoard.CurrentFuel () >= 5) {
 
 												currentTime = 0;
-												ScoreBoard.fireTank();
+												ScoreBoard.fireTank ();
 							
 												//Vector3 newPosition = hit2.point;
 												GameObject tank1 = Instantiate (tankPrefab) as GameObject;
@@ -127,20 +127,17 @@ public class CarFactory : MonoBehaviour {
 								isleftSwipe = false;
 								isupSwipe = false;
 						}
-				}
-
-		else if(Input.GetMouseButtonDown(0)){
-			RaycastHit hit;
-			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-			if (Physics.Raycast(ray, out hit))
-			{
-				if(currentTime >= carRate && ScoreBoard.CurrentFuel()>0){
-					currentTime = 0;
-					ScoreBoard.fire();
-				Vector3 newPosition = hit.point;
-				GameObject car=Instantiate( carPrefab ) as GameObject;
-				//car.transform.position=new Vector3(10f, 0f, z);
-				/*if(newPosition.z<=20f && newPosition.z>10f){
+				} else if (Input.GetMouseButtonDown (0)) {
+						RaycastHit hit;
+						Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
+						if (Physics.Raycast (ray, out hit)) {
+								if (currentTime >= carRate && ScoreBoard.CurrentFuel () > 0) {
+										currentTime = 0;
+										ScoreBoard.fire ();
+										Vector3 newPosition = hit.point;
+										GameObject car = Instantiate (carPrefab) as GameObject;
+										//car.transform.position=new Vector3(10f, 0f, z);
+										/*if(newPosition.z<=20f && newPosition.z>10f){
 				car.transform.position=new Vector3(10f, 0f, 15f);
 				}
 				else if(newPosition.z<=10f && newPosition.z>0f){
@@ -152,33 +149,45 @@ public class CarFactory : MonoBehaviour {
 				if(newPosition.z<=-10f && newPosition.z>=-20f){
 					car.transform.position=new Vector3(10f, 0f, -15f);
 				}*/
-				if(newPosition.z<=20f && newPosition.z>15f){
-						car.transform.position=new Vector3(10f, offsetY, 17.5f);
+										if (newPosition.z <= 20f && newPosition.z > 15f) {
+												car.transform.position = new Vector3 (10f, offsetY, 17.5f);
+										} else if (newPosition.z <= 15f && newPosition.z > 10f) {
+												car.transform.position = new Vector3 (10f, offsetY, 12.5f);
+										}
+										if (newPosition.z <= 10f && newPosition.z > 5f) {
+												car.transform.position = new Vector3 (10f, offsetY, 7.5f);
+										}
+										if (newPosition.z <= 5f && newPosition.z > 0f) {
+												car.transform.position = new Vector3 (10f, offsetY, 2.5f);
+										}
+										if (newPosition.z <= 0f && newPosition.z > -5f) {
+												car.transform.position = new Vector3 (10f, offsetY, -2.5f);
+										} else if (newPosition.z <= -5f && newPosition.z > -10f) {
+												car.transform.position = new Vector3 (10f, offsetY, -7.5f);
+										}
+										if (newPosition.z <= -10f && newPosition.z > -15f) {
+												car.transform.position = new Vector3 (10f, offsetY, -12.5f);
+										}
+										if (newPosition.z <= -15f && newPosition.z >= -20f) {
+												car.transform.position = new Vector3 (10f, offsetY, -17.5f);
+										}
+								}
+						}
+				} else if (Input.GetKeyUp (KeyCode.Space)) {
+						if (currentTime >= tankRate && ScoreBoard.CurrentFuel () >= 5) {
+				
+								currentTime = 0;
+								ScoreBoard.fireTank ();
+				
+								//Vector3 newPosition = hit2.point;
+								GameObject tank1 = Instantiate (tankPrefab) as GameObject;
+								tank1.transform.position = new Vector3 (-4, offsetY, -20);
+				
+								GameObject tank2 = Instantiate (tankPrefab) as GameObject;
+								tank2.transform.position = new Vector3 (4, offsetY, -20);
+
+						}
 				}
-				else if(newPosition.z<=15f && newPosition.z>10f){
-						car.transform.position=new Vector3(10f, offsetY, 12.5f);
-				}
-				if(newPosition.z<=10f && newPosition.z>5f){
-						car.transform.position=new Vector3(10f, offsetY, 7.5f);
-				}
-				if(newPosition.z<=5f && newPosition.z>0f){
-						car.transform.position=new Vector3(10f, offsetY, 2.5f);
-				}
-				if(newPosition.z<=0f && newPosition.z>-5f){
-						car.transform.position=new Vector3(10f, offsetY, -2.5f);
-				}
-				else if(newPosition.z<=-5f && newPosition.z>-10f){
-						car.transform.position=new Vector3(10f, offsetY, -7.5f);
-				}
-				if(newPosition.z<=-10f && newPosition.z>-15f){
-						car.transform.position=new Vector3(10f, offsetY, -12.5f);
-				}
-				if(newPosition.z<=-15f && newPosition.z>=-20f){
-						car.transform.position=new Vector3(10f, offsetY, -17.5f);
-				}
-				}
-			}
-		}
 
 		// make sure that currentTime doesn't grow too big
 		if (currentTime > 100f) {
