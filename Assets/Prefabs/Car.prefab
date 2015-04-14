@@ -316,6 +316,7 @@ GameObject:
   - 4: {fileID: 431506}
   - 33: {fileID: 3331506}
   - 23: {fileID: 2331506}
+  - 65: {fileID: 6561258}
   m_Layer: 0
   m_Name: Cube.001
   m_TagString: Untagged
@@ -333,6 +334,7 @@ GameObject:
   - 4: {fileID: 431508}
   - 33: {fileID: 3331508}
   - 23: {fileID: 2331508}
+  - 65: {fileID: 6534672}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -1187,6 +1189,30 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &6534672
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 131508}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.00000095, y: 2.00000095, z: 2}
+  m_Center: {x: -5.96046448e-08, y: -1.1920929e-07, z: 0}
+--- !u!65 &6561258
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 131506}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.00000095, y: 2.00000095, z: 2.00000048}
+  m_Center: {x: -5.96046448e-08, y: -5.96046448e-08, z: -2.98023224e-07}
 --- !u!65 &6564892
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1195,7 +1221,7 @@ BoxCollider:
   m_GameObject: {fileID: 131510}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 3, y: 3, z: 7}
   m_Center: {x: 0, y: 0, z: 0}
