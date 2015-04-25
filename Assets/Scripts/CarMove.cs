@@ -50,7 +50,7 @@ public class CarMove : MonoBehaviour
 			zmScript.afterCollide ();
 		}
 		AudioSource.PlayClipAtPoint (crash, collider.transform.position, 1f);
-		Destroy(this.gameObject,0.8f);
+		Destroy(this.gameObject,0.5f);
 		ScoreBoard.DestoyOneZombie ();
 
 	}

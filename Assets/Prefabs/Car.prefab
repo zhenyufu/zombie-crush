@@ -1251,7 +1251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a883de9e12a42484aac88313bdd48b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 14
   crash: {fileID: 8300000, guid: 256b3ef638e35e647ade49f7852a88b8, type: 3}
 --- !u!1001 &100100000
 Prefab:
