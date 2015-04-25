@@ -32,5 +32,6 @@ public class ZombieMove : MonoBehaviour
 
 	public void afterCollide() {
 		collided = true;
+		rigidbody.constraints = RigidbodyConstraints.None;
 	}
 }
