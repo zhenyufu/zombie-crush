@@ -58,7 +58,7 @@ public class ZombieFactory : MonoBehaviour {
 		for (int i=0; i<numZombie; i++) {
 			GameObject zombie = Instantiate (zombieType1) as GameObject;
 			
-			zombie.transform.position = new Vector3 (Random.Range(-width+widthOffset, width-widthOffset), 0.5f, Random.Range(start, start+zRange));
+			zombie.transform.position = new Vector3 (Random.Range(-width+widthOffset, width-widthOffset), 1f, Random.Range(start, start+zRange));
 			
 			
 			
