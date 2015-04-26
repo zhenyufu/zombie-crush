@@ -39,17 +39,22 @@ public class CarMove : MonoBehaviour
 
 
 	void OnCollisionEnter(Collision collision) {
+
 		if (collision.gameObject.tag == "Zombie" ) {
-				GameObject bangIns = Instantiate (bang) as GameObject;
-				bangIns.transform.position = new Vector3 (collision.transform.position.x, 5f, collision.transform.position.z);
-			Destroy (collision.gameObject, 1.3f);   
+  
 			ZombieMove zmScript = collision.gameObject.GetComponent<ZombieMove> ();
-			zmScript.afterCollide ();
+
+
 			//
+			if(!zmScript.getCollided()){
+			GameObject bangIns = Instantiate (bang) as GameObject;
+			bangIns.transform.position = new Vector3 (collision.transform.position.x, 5f, collision.transform.position.z);
+			Destroy (collision.gameObject, 1.3f); 
 			AudioSource.PlayClipAtPoint (crash, collider.transform.position, 1f);
 			Destroy(this.gameObject,0.5f);
 			ScoreBoard.DestoyOneZombie ();
-		}
+			}
+			zmScript.afterCollide ();}
 //		else if(collision.transform.parent.gameObject.tag == "Zombie"){
 //			Destroy (collision.transform.parent.gameObject, 1.3f);   
 //			ZombieMove zmScript = collision.transform.parent.gameObject.GetComponent<ZombieMove> ();

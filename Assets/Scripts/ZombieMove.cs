@@ -5,8 +5,7 @@ public class ZombieMove : MonoBehaviour
 {
 	public static GameObject plane;// = GameObject.Find("Plane");
 	public float speed = 2f;
-	bool collided;
-	private bool ifbanged=false;
+	public bool collided;
 	// Use this for initialization
 	void Start ()
 	{
@@ -30,7 +29,15 @@ public class ZombieMove : MonoBehaviour
 	}
 
 	public void afterCollide() {
-		collided = true;
-		rigidbody.constraints = RigidbodyConstraints.None;
+		if (!collided) {
+						collided = true;
+						rigidbody.constraints = RigidbodyConstraints.None;
+				}
 	}
+
+	public bool getCollided(){
+		return collided;
+
+	}
+
 }

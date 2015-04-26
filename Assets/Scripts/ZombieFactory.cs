@@ -18,7 +18,6 @@ public class ZombieFactory : MonoBehaviour {
 	private float spwanRangeExtend;
 	private float startTime;
 	private int baseNum=0;
-
 	// Use this for initialization
 	void Start () {
 		startTime = Time.time;
@@ -51,27 +50,27 @@ public class ZombieFactory : MonoBehaviour {
 	}
 
 	void makeZombie(){
-		float currentTime = Time.time;
-		float elipsed = currentTime - startTime;
-		print (elipsed);
-		
-		int numZombie = Mathf.FloorToInt (2*elipsed/10+baseNum);//zombieCoefficient*Mathf.Pow (elipsed, 1));
-		for (int i=0; i<numZombie; i++) {
-			GameObject zombie = Instantiate (zombieType1) as GameObject;
-			
-			zombie.transform.position = new Vector3 (Random.Range(-width+widthOffset, width-widthOffset), 1f, Random.Range(start, start+zRange));
-			
-			
-			
-			
-		}
+//		float currentTime = Time.time;
+//		float elipsed = currentTime - startTime;
+//		print (elipsed);
+//		
+//		int numZombie = Mathf.FloorToInt (2*elipsed/5+baseNum);//zombieCoefficient*Mathf.Pow (elipsed, 1));
+//		for (int i=0; i<numZombie; i++) {
+//			GameObject zombie = Instantiate (zombieType1) as GameObject;
+//			
+//			zombie.transform.position = new Vector3 (Random.Range(-width+widthOffset, width-widthOffset), 1f, Random.Range(start, start+zRange));
+//			
+//			
+//			
+//			
+//		}
 
-		//int currentScore = ScoreBoard.CurrentScore ();
-		//spwanRangeExtend = widthOffset+currentScore;
-		//ZombieSpawner (currentScore);
-		//GameObject zombie = Instantiate (zombieType1) as GameObject;
-						//zombie.transform.position = new Vector3 (-7f, 0.5f, start);
-		//zombie.transform.position = new Vector3 (Random.Range (width-spwanRange-spwanRangeExtend, width-spwanRangeExtend), 0.5f, start);
+		int currentScore = ScoreBoard.CurrentScore ();
+		spwanRangeExtend = widthOffset+currentScore;
+		ZombieSpawner (currentScore);
+//		GameObject zombie = Instantiate (zombieType1) as GameObject;
+//						zombie.transform.position = new Vector3 (-7f, 0.5f, start);
+//		zombie.transform.position = new Vector3 (Random.Range (width-spwanRange-spwanRangeExtend, width-spwanRangeExtend), 0.5f, start);
 
 				
 
@@ -79,11 +78,11 @@ public class ZombieFactory : MonoBehaviour {
 
 	 void ZombieSpawner(int currentScore){
 
-		for (int i=0; i<10; i++) {
-						GameObject zombie = Instantiate (zombieType1) as GameObject;
-			zombie.transform.position = new Vector3 (width-widthOffset, 0.5f, start);//-width + widthOffset=leftmost; 0=mid;width-widthOffset=rightmost
-				}
-	/*	if (spwanRangeExtend + spwanRange < 2*width - widthOffset) {
+//		for (int i=0; i<10; i++) {
+//						GameObject zombie = Instantiate (zombieType1) as GameObject;
+//			zombie.transform.position = new Vector3 (width-widthOffset, 0.5f, start);//-width + widthOffset=leftmost; 0=mid;width-widthOffset=rightmost
+//				}
+		if (spwanRangeExtend + spwanRange < 2*width - widthOffset) {
 						GameObject zombie = Instantiate (zombieType1) as GameObject;
 						zombie.transform.position = new Vector3 (Random.Range (width - spwanRange - spwanRangeExtend, width - spwanRangeExtend), 0.5f, start);
 		} else if ((spwanRangeExtend + spwanRange >= 2*width - widthOffset) && currentScore < 50) {//the spawn range has went beyond the width
@@ -106,6 +105,6 @@ public class ZombieFactory : MonoBehaviour {
 
 
 
-				}*/
+				}
 	}
 }
