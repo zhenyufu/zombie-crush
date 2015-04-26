@@ -139,11 +139,10 @@ public class CarFactory : MonoBehaviour {
 
 		else if (Input.GetMouseButton (0)) {
 			holdTime+=Time.deltaTime;
-			if(holdTime > 0.2f){
-				holdTime = 0f;
-				startPower++;
+			if(holdTime > 0.01f){
+				startPower += 2;
 				carSlider.value = startPower;
-				
+				holdTime = 0f;
 			}
 			
 			
@@ -257,7 +256,8 @@ public class CarFactory : MonoBehaviour {
 										if (newPosition.z <= -15f && newPosition.z >= -20f) {
 												car.transform.position = new Vector3 (10f, offsetY, -17.5f);
 										}*/
-					carleft.GetComponent<CarMove> ().speed = 4 + startPower ;		
+					if(startPower > 100){startPower = 100;}
+					carleft.GetComponent<CarMove> ().speed = 4 + startPower/10f ;		
 					
 					
 					//hold time
