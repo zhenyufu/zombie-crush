@@ -1252,8 +1252,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bang: {fileID: 195204, guid: 9cdff9d50381a4572ad5a2727014416c, type: 2}
+  crispy: {fileID: 143312, guid: d9560bb1223874db185274b338d38f64, type: 2}
+  blast: {fileID: 183956, guid: 6d26515787d254e54b515c9d27402382, type: 2}
+  alright: {fileID: 159778, guid: 3256ba2cc953444a0b903f90c415e732, type: 2}
+  sweet: {fileID: 145644, guid: a9326d59752974f66bb9085b457b2d24, type: 2}
   speed: 10
   crash: {fileID: 8300000, guid: 256b3ef638e35e647ade49f7852a88b8, type: 3}
+  comboCounter: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
