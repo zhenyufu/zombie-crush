@@ -30,6 +30,11 @@ public static class ScoreBoard {
 		Displayui.refresh();
 	}
 
+	public static void goBeyondBound(){
+		fuel -= 2;
+		Displayui.refresh ();
+	}
+
 	public static void fireTank(){
 		fuel -= 5;
 		Displayui.refresh ();

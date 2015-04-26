@@ -23,7 +23,7 @@ public class ZombieMove : MonoBehaviour
 
 			if (transform.position.z < -ZombieFactory.start) {
 				Destroy (this.gameObject); 
-				ScoreBoard.fire ();
+				ScoreBoard.goBeyondBound();
 			}
 		}
 	}

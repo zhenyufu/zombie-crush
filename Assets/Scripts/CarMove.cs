@@ -4,9 +4,14 @@ using System.Collections;
 public class CarMove : MonoBehaviour
 {
 	public GameObject bang;
+	public GameObject crispy;
+	public GameObject blast;
+	public GameObject alright;
+	public GameObject sweet;
 	public static GameObject plane;// = GameObject.Find("Plane");
 	public float speed = 4f;
 	public AudioClip crash;
+	public int comboCounter=0;
 	bool collided;
 
 	// Use this for initialization
@@ -48,7 +53,29 @@ public class CarMove : MonoBehaviour
 			//
 			if(!zmScript.getCollided()){
 			GameObject bangIns = Instantiate (bang) as GameObject;
+
+				comboCounter++;
+			if(comboCounter==1){
+					GameObject crispy1 = Instantiate (crispy) as GameObject;
+					Destroy(crispy1,1f);
+				}
+			else if(comboCounter==2){
+					GameObject blast1 = Instantiate (blast) as GameObject;
+					Destroy(blast1,1f);
+				}
+			else if(comboCounter==3){
+					GameObject alright1 = Instantiate (alright) as GameObject;
+					Destroy(alright1,1f);
+				}
+			else{
+					GameObject sweet1 = Instantiate (sweet) as GameObject;
+					Destroy(sweet1,1f);
+				}
+
+		
 			bangIns.transform.position = new Vector3 (collision.transform.position.x, 5f, collision.transform.position.z);
+				Destroy(bangIns,0.4f);
+
 			Destroy (collision.gameObject, 1.3f); 
 			AudioSource.PlayClipAtPoint (crash, collider.transform.position, 1f);
 			Destroy(this.gameObject,0.5f);
