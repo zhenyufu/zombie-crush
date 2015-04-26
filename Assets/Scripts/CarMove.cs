@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CarMove : MonoBehaviour
 {
-
+	public GameObject bang;
 	public static GameObject plane;// = GameObject.Find("Plane");
 	public float speed = 4f;
 	public AudioClip crash;
@@ -40,6 +40,8 @@ public class CarMove : MonoBehaviour
 
 	void OnCollisionEnter(Collision collision) {
 		if (collision.gameObject.tag == "Zombie" ) {
+				GameObject bangIns = Instantiate (bang) as GameObject;
+				bangIns.transform.position = new Vector3 (collision.transform.position.x, 5f, collision.transform.position.z);
 			Destroy (collision.gameObject, 1.3f);   
 			ZombieMove zmScript = collision.gameObject.GetComponent<ZombieMove> ();
 			zmScript.afterCollide ();
@@ -48,15 +50,15 @@ public class CarMove : MonoBehaviour
 			Destroy(this.gameObject,0.5f);
 			ScoreBoard.DestoyOneZombie ();
 		}
-		else if(collision.transform.parent.gameObject.tag == "Zombie"){
-			Destroy (collision.transform.parent.gameObject, 1.3f);   
-			ZombieMove zmScript = collision.transform.parent.gameObject.GetComponent<ZombieMove> ();
-			zmScript.afterCollide ();
-			//
-			AudioSource.PlayClipAtPoint (crash, collider.transform.position, 1f);
-			Destroy(this.gameObject,0.5f);
-			ScoreBoard.DestoyOneZombie ();
-		}
+//		else if(collision.transform.parent.gameObject.tag == "Zombie"){
+//			Destroy (collision.transform.parent.gameObject, 1.3f);   
+//			ZombieMove zmScript = collision.transform.parent.gameObject.GetComponent<ZombieMove> ();
+//			zmScript.afterCollide ();
+//			//
+//			AudioSource.PlayClipAtPoint (crash, collider.transform.position, 1f);
+//			Destroy(this.gameObject,0.5f);
+//			ScoreBoard.DestoyOneZombie ();
+//		}
 
 
 	}
@@ -64,29 +66,29 @@ public class CarMove : MonoBehaviour
 
 
 
-	void OnTriggerEnter (Collider other)
-	{
-		Debug.Log (other.gameObject.tag);
-		if (other.gameObject.tag == "Zombie") {
-			//disableCollider();
-			Debug.Log ("collide");
-			AudioSource.PlayClipAtPoint (crash, collider.transform.position, 1f);
-
-			//ZombieMove zmScript = other.GetComponent<ZombieMove> ();
-			//zmScript.afterCollide ();
-			//other.animation.CrossFade ("Dead", 0.2f);
-
-			//collided = true;
-			//InvokeRepeating ("CarBlink", 0f, 1f);
-			Destroy (other.gameObject, 1.3f);   
-			Destroy(this.gameObject,0.8f);
-			//yield return new WaitForSeconds (1f);
-
-			ScoreBoard.DestoyOneZombie ();
-
-			//print(ScoreBoard.CurrentScore());
-		}
-	}
+//	void OnTriggerEnter (Collider other)
+//	{
+//		Debug.Log (other.gameObject.tag);
+//		if (other.gameObject.tag == "Zombie") {
+//			//disableCollider();
+//			Debug.Log ("collide");
+//			AudioSource.PlayClipAtPoint (crash, collider.transform.position, 1f);
+//
+//			//ZombieMove zmScript = other.GetComponent<ZombieMove> ();
+//			//zmScript.afterCollide ();
+//			//other.animation.CrossFade ("Dead", 0.2f);
+//
+//			//collided = true;
+//			//InvokeRepeating ("CarBlink", 0f, 1f);
+//			Destroy (other.gameObject, 1.3f);   
+//			Destroy(this.gameObject,0.8f);
+//			//yield return new WaitForSeconds (1f);
+//
+//			ScoreBoard.DestoyOneZombie ();
+//
+//			//print(ScoreBoard.CurrentScore());
+//		}
+//	}
 
 	  IEnumerator CarBlink ()
 	{

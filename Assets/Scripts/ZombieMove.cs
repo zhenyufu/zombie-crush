@@ -3,11 +3,10 @@ using System.Collections;
 
 public class ZombieMove : MonoBehaviour
 {
-
 	public static GameObject plane;// = GameObject.Find("Plane");
 	public float speed = 2f;
 	bool collided;
-
+	private bool ifbanged=false;
 	// Use this for initialization
 	void Start ()
 	{
