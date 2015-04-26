@@ -9,6 +9,7 @@ public class ZombieFactory : MonoBehaviour {
 
 	public GameObject zombieType1;
 	public GameObject zombieType2;
+	public GameObject zombieType3;
 	public float time = 3f;
 	public float widthOffset=1f;
 	public float spwanRange=2f;
@@ -83,25 +84,37 @@ public class ZombieFactory : MonoBehaviour {
 //			zombie.transform.position = new Vector3 (width-widthOffset, 0.5f, start);//-width + widthOffset=leftmost; 0=mid;width-widthOffset=rightmost
 //				}
 		if (spwanRangeExtend + spwanRange < 2*width - widthOffset) {
+			for(int i=0;i<3;i++){
 						GameObject zombie = Instantiate (zombieType1) as GameObject;
-						zombie.transform.position = new Vector3 (Random.Range (width - spwanRange - spwanRangeExtend, width - spwanRangeExtend), 0.5f, start);
-		} else if ((spwanRangeExtend + spwanRange >= 2*width - widthOffset) && currentScore < 50) {//the spawn range has went beyond the width
-						int type = Random.Range (1, 3);
-			print(type);
+				zombie.transform.position = new Vector3 (Random.Range (width - spwanRange - spwanRangeExtend, width - spwanRangeExtend), 0.5f, Random.Range (start,start+5f));}
+		} else if ((spwanRangeExtend + spwanRange >= 2*width - widthOffset) && currentScore < 30) {//the spawn range has went beyond the width
+			for(int i=0;i<3;i++){
+						int type = Random.Range (1, 4);
+			//print(type);
 						if (type == 1) {
 
 								GameObject zombie = Instantiate (zombieType1) as GameObject;
-								zombie.transform.position = new Vector3 (Random.Range (-width + widthOffset, 0), 0.5f, start);
+				zombie.transform.position = new Vector3 (Random.Range (-width + widthOffset, 0), 0.5f,Random.Range (start,start+5f));
 						} else if (type == 2) {
 
 								GameObject zombie = Instantiate (zombieType2) as GameObject;
-								zombie.transform.position = new Vector3 (Random.Range (0, width - widthOffset), 0.5f, start);
-						}
+				zombie.transform.position = new Vector3 (Random.Range (0, width - widthOffset), 0.5f, Random.Range (start,start+5f));
+			}
+			}
+				} else if (currentScore >= 30) {
+			for(int i=0 ;i<(currentScore-30);i++){
+				int type = Random.Range (2, 4);
+				if(type==2){
+				GameObject zombie = Instantiate (zombieType2) as GameObject;
+				zombie.transform.position = new Vector3 (Random.Range (-width + widthOffset, width - widthOffset), 0.5f, Random.Range (start,start+5f));
 
 
-				} else if (currentScore >= 50) {
-					GameObject zombie = Instantiate (zombieType2) as GameObject;
-								zombie.transform.position = new Vector3 (Random.Range (-width + widthOffset, width - widthOffset), 0.5f, start);
+			}else if(type==3){
+				GameObject zombie = Instantiate (zombieType3) as GameObject;
+				zombie.transform.position = new Vector3 (Random.Range (-width + widthOffset, width - widthOffset), 0.5f, Random.Range (start,start+5f));
+
+			}
+			}
 
 
 
