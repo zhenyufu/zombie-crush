@@ -6,6 +6,7 @@ public class ZombieMove : MonoBehaviour
 	public static GameObject plane;// = GameObject.Find("Plane");
 	public float speed = 2f;
 	public bool collided;
+	private float topY = 1.5f;
 	// Use this for initialization
 	void Start ()
 	{
@@ -17,15 +18,21 @@ public class ZombieMove : MonoBehaviour
 	void Update ()
 	{
 		if (!collided) {
-			Vector3 pos = transform.position;
-			pos.z -= speed * Time.deltaTime;
-			transform.position = pos;
+						Vector3 pos = transform.position;
+						pos.z -= speed * Time.deltaTime;
+						transform.position = pos;
 
-			if (transform.position.z < -ZombieFactory.start) {
-				Destroy (this.gameObject); 
-				ScoreBoard.goBeyondBound();
-			}
-		}
+						if (transform.position.z < -ZombieFactory.start) {
+								Destroy (this.gameObject); 
+								ScoreBoard.goBeyondBound ();
+						}
+			if (this.gameObject.transform.position.y > topY) {
+				this.gameObject.transform.position = new Vector3(this.gameObject.transform.position.x, topY, this.gameObject.transform.position.z);
+			}	
+
+				} 
+
+
 	}
 
 	public void afterCollide() {
