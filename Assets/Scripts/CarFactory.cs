@@ -18,7 +18,7 @@ public class CarFactory : MonoBehaviour {
 	public float tankRate=1f;
 	//private float nextCar=0f;
 	private float currentTime = 0f;// interval 
-	private float offsetY = 0.5f;
+	private float offsetY = 1.2f;
 	// Use this for initialization
 	//
 	private int startPower = 0;
@@ -173,6 +173,10 @@ public class CarFactory : MonoBehaviour {
 				if(newPosition.z<=-10f && newPosition.z>=-20f){
 					car.transform.position=new Vector3(10f, 0f, -15f);
 				}*/
+
+					if (newPosition.z <= 20f && newPosition.z > 10f || newPosition.z >= - 20f && newPosition.z < - 10f){
+						offsetY = 1.7f;
+					}
 					if (newPosition.z <= 20f && newPosition.z > 15f  ) {
 						//	GameObject carleft = Instantiate (carPrefab) as GameObject;
 						carleft.transform.position = new Vector3 (10f, offsetY, 17.5f);
