@@ -17,6 +17,7 @@ public class ZombieFactory : MonoBehaviour {
 	//public float exponentBase = 2f;
 	private float spwanRangeExtend;
 	private float startTime;
+	private int baseNum=0;
 
 	// Use this for initialization
 	void Start () {
@@ -54,7 +55,7 @@ public class ZombieFactory : MonoBehaviour {
 		float elipsed = currentTime - startTime;
 		print (elipsed);
 		
-		int numZombie = Mathf.FloorToInt (zombieCoefficient*elipsed);//zombieCoefficient*Mathf.Pow (elipsed, 1));
+		int numZombie = Mathf.FloorToInt (2*elipsed/10+baseNum);//zombieCoefficient*Mathf.Pow (elipsed, 1));
 		for (int i=0; i<numZombie; i++) {
 			GameObject zombie = Instantiate (zombieType1) as GameObject;
 			

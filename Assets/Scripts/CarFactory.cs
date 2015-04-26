@@ -136,7 +136,7 @@ public class CarFactory : MonoBehaviour {
 										currentTime = 0;
 										ScoreBoard.fire ();
 										Vector3 newPosition = hit.point;
-										//GameObject car = Instantiate (carPrefab) as GameObject;
+										GameObject carleft = Instantiate (carPrefab) as GameObject;
 										//car.transform.position=new Vector3(10f, 0f, z);
 										/*if(newPosition.z<=20f && newPosition.z>10f){
 				car.transform.position=new Vector3(10f, 0f, 15f);
@@ -150,70 +150,70 @@ public class CarFactory : MonoBehaviour {
 				if(newPosition.z<=-10f && newPosition.z>=-20f){
 					car.transform.position=new Vector3(10f, 0f, -15f);
 				}*/
-										if (newPosition.z <= 20f && newPosition.z > 15f && newPosition.x> 0f) {
-												GameObject carleft = Instantiate (carPrefab) as GameObject;
+										if (newPosition.z <= 20f && newPosition.z > 15f  ) {
+											//	GameObject carleft = Instantiate (carPrefab) as GameObject;
 												carleft.transform.position = new Vector3 (10f, offsetY, 17.5f);
 										}
-										else if(newPosition.z <= 20f && newPosition.z > 15f && newPosition.x<= 0f) {
-												GameObject carright = Instantiate (carPrefab2) as GameObject;
-												carright.transform.position = new Vector3 (-10f, offsetY, 17.5f);
-										}
-										if (newPosition.z <= 15f && newPosition.z > 10f && newPosition.x> 0f) {
-												GameObject carleft = Instantiate (carPrefab) as GameObject;
+//										else if(newPosition.z <= 20f && newPosition.z > 15f && newPosition.x<= 0f) {
+//												GameObject carright = Instantiate (carPrefab2) as GameObject;
+//												carright.transform.position = new Vector3 (-10f, offsetY, 17.5f);
+//										}
+										if (newPosition.z <= 15f && newPosition.z > 10f ) {
+											//	GameObject carleft = Instantiate (carPrefab) as GameObject;
 												carleft.transform.position = new Vector3 (10f, offsetY, 12.5f);
 										}
-										else if(newPosition.z <= 15f && newPosition.z > 10f && newPosition.x<= 0f) {
-												GameObject carright = Instantiate (carPrefab2) as GameObject;
-												carright.transform.position = new Vector3 (-10f, offsetY, 12.5f);
-										}
-										if (newPosition.z <= 10f && newPosition.z > 5f && newPosition.x> 0f) {
-												GameObject carleft = Instantiate (carPrefab) as GameObject;
+//										else if(newPosition.z <= 15f && newPosition.z > 10f && newPosition.x<= 0f) {
+//												GameObject carright = Instantiate (carPrefab2) as GameObject;
+//												carright.transform.position = new Vector3 (-10f, offsetY, 12.5f);
+//										}
+										if (newPosition.z <= 10f && newPosition.z > 5f ) {
+												//GameObject carleft = Instantiate (carPrefab) as GameObject;
 												carleft.transform.position = new Vector3 (10f, offsetY, 7.5f);
 										}
-										else if(newPosition.z <= 10f && newPosition.z > 5f && newPosition.x<= 0f) {
-												GameObject carright = Instantiate (carPrefab2) as GameObject;
-												carright.transform.position = new Vector3 (-10f, offsetY, 7.5f);
-										}
-					if (newPosition.z <= 5f && newPosition.z > 0f && newPosition.x> 0f) {
-						GameObject carleft = Instantiate (carPrefab) as GameObject;
+//										else if(newPosition.z <= 10f && newPosition.z > 5f && newPosition.x<= 0f) {
+//												GameObject carright = Instantiate (carPrefab2) as GameObject;
+//												carright.transform.position = new Vector3 (-10f, offsetY, 7.5f);
+//										}
+					if (newPosition.z <= 5f && newPosition.z > 0f ) {
+						//GameObject carleft = Instantiate (carPrefab) as GameObject;
 						carleft.transform.position = new Vector3 (10f, offsetY, 2.5f);
 					}
-					else if(newPosition.z <= 5f && newPosition.z > 0f && newPosition.x<= 0f) {
-						GameObject carright = Instantiate (carPrefab2) as GameObject;
-						carright.transform.position = new Vector3 (-10f, offsetY, 2.5f);
-					}
-					if (newPosition.z <= 0f && newPosition.z > -5f && newPosition.x> 0f) {
-						GameObject carleft = Instantiate (carPrefab) as GameObject;
+//					else if(newPosition.z <= 5f && newPosition.z > 0f && newPosition.x<= 0f) {
+//						GameObject carright = Instantiate (carPrefab2) as GameObject;
+//						carright.transform.position = new Vector3 (-10f, offsetY, 2.5f);
+//					}
+					if (newPosition.z <= 0f && newPosition.z > -5f ) {
+						//GameObject carleft = Instantiate (carPrefab) as GameObject;
 						carleft.transform.position = new Vector3 (10f, offsetY, -2.5f);
 					}
-					else if(newPosition.z <= 0f && newPosition.z > -5f && newPosition.x<= 0f) {
-						GameObject carright = Instantiate (carPrefab2) as GameObject;
-						carright.transform.position = new Vector3 (-10f, offsetY, -2.5f);
-					}
-					if (newPosition.z <= -5f && newPosition.z > -10f && newPosition.x> 0f) {
-						GameObject carleft = Instantiate (carPrefab) as GameObject;
+//					else if(newPosition.z <= 0f && newPosition.z > -5f && newPosition.x<= 0f) {
+//						GameObject carright = Instantiate (carPrefab2) as GameObject;
+//						carright.transform.position = new Vector3 (-10f, offsetY, -2.5f);
+//					}
+					if (newPosition.z <= -5f && newPosition.z > -10f ) {
+						//GameObject carleft = Instantiate (carPrefab) as GameObject;
 						carleft.transform.position = new Vector3 (10f, offsetY, -7.5f);
 					}
-					else if(newPosition.z <= -5f && newPosition.z > -10f && newPosition.x<= 0f) {
-						GameObject carright = Instantiate (carPrefab2) as GameObject;
-						carright.transform.position = new Vector3 (-10f, offsetY, -7.5f);
-					}
-					if (newPosition.z <= -10f && newPosition.z > -15f && newPosition.x> 0f) {
-						GameObject carleft = Instantiate (carPrefab) as GameObject;
+//					else if(newPosition.z <= -5f && newPosition.z > -10f && newPosition.x<= 0f) {
+//						GameObject carright = Instantiate (carPrefab2) as GameObject;
+//						carright.transform.position = new Vector3 (-10f, offsetY, -7.5f);
+//					}
+					if (newPosition.z <= -10f && newPosition.z > -15f ) {
+						//GameObject carleft = Instantiate (carPrefab) as GameObject;
 						carleft.transform.position = new Vector3 (10f, offsetY, -12.5f);
 					}
-					else if(newPosition.z <= -10f && newPosition.z > -15f && newPosition.x<= 0f) {
-						GameObject carright = Instantiate (carPrefab2) as GameObject;
-						carright.transform.position = new Vector3 (-10f, offsetY, -12.5f);
-					}					
-					if (newPosition.z <= -15f && newPosition.z >= -20f && newPosition.x> 0f) {
-						GameObject carleft = Instantiate (carPrefab) as GameObject;
+//					else if(newPosition.z <= -10f && newPosition.z > -15f && newPosition.x<= 0f) {
+//						GameObject carright = Instantiate (carPrefab2) as GameObject;
+//						carright.transform.position = new Vector3 (-10f, offsetY, -12.5f);
+//					}					
+					if (newPosition.z <= -15f && newPosition.z >= -20f ) {
+						//GameObject carleft = Instantiate (carPrefab) as GameObject;
 						carleft.transform.position = new Vector3 (10f, offsetY, -17.5f);
 					}
-					else if(newPosition.z <= -15f && newPosition.z >= -20f && newPosition.x<= 0f) {
-						GameObject carright = Instantiate (carPrefab2) as GameObject;
-						carright.transform.position = new Vector3 (-10f, offsetY, -17.5f);
-					}					
+//					else if(newPosition.z <= -15f && newPosition.z >= -20f && newPosition.x<= 0f) {
+//						GameObject carright = Instantiate (carPrefab2) as GameObject;
+//						carright.transform.position = new Vector3 (-10f, offsetY, -17.5f);
+//					}					
 
 									/*	if (newPosition.z <= 10f && newPosition.z > 5f) {
 												car.transform.position = new Vector3 (10f, offsetY, 7.5f);
