@@ -48,7 +48,7 @@ public class CarMove : MonoBehaviour
 		if (collision.gameObject.tag == "Zombie" ) {
   
 			ZombieMove zmScript = collision.gameObject.GetComponent<ZombieMove> ();
-
+			Tankfactory tankFactory = Camera.main.GetComponent<Tankfactory> ();
 
 			//
 			if(!zmScript.getCollided()){
@@ -72,7 +72,7 @@ public class CarMove : MonoBehaviour
 					Destroy(sweet1,1f);
 				}
 
-		
+				tankFactory.addTank(comboCounter); 
 			bangIns.transform.position = new Vector3 (collision.transform.position.x, 5f, collision.transform.position.z);
 				Destroy(bangIns,0.4f);
 

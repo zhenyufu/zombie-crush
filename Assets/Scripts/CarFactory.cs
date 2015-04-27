@@ -7,7 +7,7 @@ public class CarFactory : MonoBehaviour {
 
 	public GameObject carPrefab;
 	public GameObject carPrefab2;
-	public GameObject tankPrefab;
+
 	public float z;
 
 	private Vector2 startPos;
@@ -25,11 +25,14 @@ public class CarFactory : MonoBehaviour {
 	private float holdTime;
 	public Slider carSlider;
 
+
+
 	void Start () {
 		isleftSwipe = false;
 		isupSwipe = false;
 	}
-	
+
+
 	// Update is called once per frame
 
 	void Update () {
@@ -108,6 +111,7 @@ public class CarFactory : MonoBehaviour {
 								}
 						}
 
+			/*
 						if (isupSwipe) {
 								RaycastHit hit2;
 								Ray ray2 = Camera.main.ScreenPointToRay (startPos);
@@ -127,6 +131,7 @@ public class CarFactory : MonoBehaviour {
 										}
 								}
 						}
+						*/
 
 						if (touch.phase == TouchPhase.Ended) {
 								startPos = Vector2.zero;
@@ -155,6 +160,10 @@ public class CarFactory : MonoBehaviour {
 			RaycastHit hit;
 			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 			if (Physics.Raycast (ray, out hit)) {
+				if(hit.transform.gameObject.tag == "TankUI"){
+					Camera.main.GetComponent<Tankfactory>().fireTank();
+				}
+				else{
 				if (currentTime >= carRate && ScoreBoard.CurrentFuel () > 0) {
 					currentTime = 0;
 					ScoreBoard.fire ();
@@ -271,7 +280,7 @@ public class CarFactory : MonoBehaviour {
 					carSlider.value = startPower;
 				}
 				
-				
+			}
 			}
 			
 			//
@@ -279,21 +288,7 @@ public class CarFactory : MonoBehaviour {
 			
 		} 
 
-		else if (Input.GetKeyUp (KeyCode.Space)) {
-						if (currentTime >= tankRate && ScoreBoard.CurrentFuel () >= 5) {
-				
-								currentTime = 0;
-								ScoreBoard.fireTank ();
-				
-								//Vector3 newPosition = hit2.point;
-								GameObject tank1 = Instantiate (tankPrefab) as GameObject;
-								tank1.transform.position = new Vector3 (-4, offsetY, -20);
-				
-								GameObject tank2 = Instantiate (tankPrefab) as GameObject;
-								tank2.transform.position = new Vector3 (4, offsetY, -20);
 
-						}
-				}
 
 		// make sure that currentTime doesn't grow too big
 		if (currentTime > 100f) {
