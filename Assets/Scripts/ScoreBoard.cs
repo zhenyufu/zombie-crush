@@ -47,5 +47,4 @@ public static class ScoreBoard {
 		fuel = TotalFuel;
 		score = 0;
 	}
-
 }

@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.Collections.Generic;
+using GameSparks.Api.Requests;
 
 public class CarFactory : MonoBehaviour {
 
@@ -36,6 +38,10 @@ public class CarFactory : MonoBehaviour {
 
 	void Update () {
 		if((ScoreBoard.CurrentFuel() <= 0 ) && GameObject.FindGameObjectWithTag("Car") == null && (GameObject.FindGameObjectWithTag("Tank"))==null) {
+			Debug.Log ("Before game ends");
+			print (ScoreBoard.CurrentScore());
+			PostScores("dummy",ScoreBoard.CurrentScore());
+			Debug.Log ("Before load end scene");
 			ScoreBoard.reload();
 			Application.LoadLevel("WinScene");
 		}
@@ -294,4 +300,19 @@ public class CarFactory : MonoBehaviour {
 			currentTime = carRate;
 		}
 	}// end of update
+
+	public void PostScores(string levelName, int scoreToBePassed)
+	{
+		new GameSparks.Api.Requests.LogEventRequest_pScore().Set_score(scoreToBePassed).Send((response) =>
+	    {
+			if (response.HasErrors)
+			{
+				Debug.Log("Update gamespark score Failed");
+			}
+			else
+			{
+				Debug.Log("Update gamespark score Successful");
+			}
+		});
+	}
 }
