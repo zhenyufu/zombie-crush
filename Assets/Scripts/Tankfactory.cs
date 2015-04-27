@@ -10,9 +10,12 @@ public class Tankfactory : MonoBehaviour {
 	public GameObject tankDisplay;
 	public GameObject tankPrefab;
 	private float offsetY = 1.2f;
-	GameObject tank1, tank2;
+	private ObjectPool objectPool;
+	private GameObject tank1,tank2; 
 	// Use this for initialization
 	void Start () {
+		objectPool = GameObject.Find("MainCamera").GetComponent<ObjectPool>(); 
+
 		tankDisplay.SetActive (false);
 	}
 	
@@ -35,11 +38,11 @@ public class Tankfactory : MonoBehaviour {
 	}
 
 	public void fireTank(){
-		tank1 = Instantiate (tankPrefab) as GameObject;
-		tank1.transform.position = new Vector3 (-4.2f, offsetY, -20f);
+		tank1 = objectPool.takeOut ("Tank");
+		tank1.transform.position = new Vector3 (-4.2f, offsetY, -25f);
 		
-		tank2 = Instantiate (tankPrefab) as GameObject;
-		tank2.transform.position = new Vector3 (4.2f, offsetY, -20f);
+		tank2 = objectPool.takeOut ("Tank");
+		tank2.transform.position = new Vector3 (4.2f, offsetY, -25f);
 
 		tankDisplay.SetActive (false);
 		tankReady = false;

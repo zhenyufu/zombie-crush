@@ -41,13 +41,25 @@ public class ObjectPool : MonoBehaviour {
 	}
 
 	IEnumerator myWait(GameObject obj, float f) {
-		print(Time.time);
+		//print(Time.time);
 		yield return new WaitForSeconds(f);
-		print(Time.time);
+		//print(Time.time);
+		//print(obj.name);
+		//zombieCheck (obj);
 		obj.SetActive (false);
 		obj.transform.parent = this.transform;
 		pools[getPosition(obj.name)].Add(obj);
 	}
+
+	/*
+	private void zombieCheck(GameObject obj){
+		if(obj.name.Substring(0, 1) == "Z"){
+
+			obj.rigidbody.constraints =  RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+
+		}
+	
+	}*/
 
 	public GameObject takeOut(string name){
 		int i = getPosition (name);
@@ -60,6 +72,7 @@ public class ObjectPool : MonoBehaviour {
 		} 
 		else{
 			GameObject temp = Instantiate(prefabArray[i]) as GameObject;
+			temp.transform.parent = this.transform.parent;
 			temp.name = prefabArray[i].name;
 			return temp;
 		}

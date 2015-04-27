@@ -4,24 +4,26 @@ using System.Collections;
 public class CarMove : MonoBehaviour
 {
 	private ObjectPool objectPool;
-
+/*
 	public GameObject bang;
 	public GameObject crispy;
 	public GameObject blast;
 	public GameObject alright;
-	public GameObject sweet;
+	public GameObject sweet;*/
 	public static GameObject plane;// = GameObject.Find("Plane");
 	public float speed = 4f;
 	public AudioClip crash;
 	public int comboCounter=0;
-	bool collided;
 
 	// Use this for initialization
 	void Start ()
 	{
 		objectPool = GameObject.Find("MainCamera").GetComponent<ObjectPool>(); 
 		plane = GameObject.Find ("Plane");
-		collided = false;
+	}
+
+	void OnEnable(){
+		comboCounter=0;
 	}
 	
 	// Update is called once per frame
@@ -55,37 +57,40 @@ public class CarMove : MonoBehaviour
 
 			//
 			if(!zmScript.getCollided()){
-			GameObject bangIns = Instantiate (bang) as GameObject;
+				GameObject bangIns = objectPool.takeOut("bang");
 
 				comboCounter++;
 			if(comboCounter==1){
-					GameObject crispy1 = Instantiate (crispy) as GameObject;
-					Destroy(crispy1,1f);
+					GameObject crispy1 = objectPool.takeOut("Crispy");
+					objectPool.putIn(crispy1,0.6f);
 				}
 			else if(comboCounter==2){
-					GameObject blast1 = Instantiate (blast) as GameObject;
-					Destroy(blast1,1f);
+					GameObject blast1 = objectPool.takeOut("Blast");
+					objectPool.putIn(blast1,0.6f);
 				}
 			else if(comboCounter==3){
-					GameObject alright1 = Instantiate (alright) as GameObject;
-					Destroy(alright1,1f);
+					GameObject alright1 = objectPool.takeOut("Alright");
+					objectPool.putIn(alright1,0.6f);
 				}
 			else{
-					GameObject sweet1 = Instantiate (sweet) as GameObject;
-					Destroy(sweet1,1f);
+					GameObject sweet1 = objectPool.takeOut("Sweet");
+					objectPool.putIn(sweet1,0.6f);
 				}
 
 				tankFactory.addTank(comboCounter); 
 			bangIns.transform.position = new Vector3 (collision.transform.position.x, 5f, collision.transform.position.z);
-				Destroy(bangIns,0.4f);
+				//Destroy(bangIns,0.4f);
+				objectPool.putIn(bangIns,0.6f);
+				//set constraint
 
-			Destroy (collision.gameObject, 1.3f); 
+				objectPool.putIn(collision.gameObject, 1.3f);
 			AudioSource.PlayClipAtPoint (crash, collider.transform.position, 1f);
 			//Destroy(this.gameObject,0.5f);
 			objectPool.putIn(this.gameObject, 0.5f);
 			ScoreBoard.DestoyOneZombie ();
 			}
-			zmScript.afterCollide ();}
+			zmScript.afterCollide ();
+		}
 //		else if(collision.transform.parent.gameObject.tag == "Zombie"){
 //			Destroy (collision.transform.parent.gameObject, 1.3f);   
 //			ZombieMove zmScript = collision.transform.parent.gameObject.GetComponent<ZombieMove> ();

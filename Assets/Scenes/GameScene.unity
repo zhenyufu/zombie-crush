@@ -1604,11 +1604,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   crash: {fileID: 8300000, guid: 256b3ef638e35e647ade49f7852a88b8, type: 3}
-  bang: {fileID: 0}
-  crispy: {fileID: 0}
-  blast: {fileID: 0}
-  alright: {fileID: 0}
-  sweet: {fileID: 0}
   comboCounter: 0
 --- !u!95 &363035090
 Animator:
@@ -9435,12 +9430,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd71a5deb50b9142b14b84b0c8c1b73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombieType1: {fileID: 190292, guid: 631baffcab06d1c4ab6bbb8bdc9f4d4d, type: 2}
-  zombieType2: {fileID: 175146, guid: 0897e662ecd4d5b4c89d4fa239a2fa4d, type: 2}
-  zombieType3: {fileID: 138434, guid: 2a8b46cf1e9dc834ca5262300beee05a, type: 2}
-  zombieType4: {fileID: 146524, guid: 221b066d340907c49ab716ef9fbdab7c, type: 2}
-  zombieType5: {fileID: 123770, guid: b40ce3635caf8234dbf7ad6111fac789, type: 2}
-  zombieType6: {fileID: 122296, guid: bbfd4b9a5310b3142a62c61dbb8ec057, type: 2}
   time: 3
   widthOffset: 1
   spwanRange: 8
@@ -9457,8 +9446,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b55249b17b7043839918490717fd5e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carPrefab: {fileID: 131510, guid: da22257fc191fae419f9280a1987fa74, type: 2}
-  carPrefab2: {fileID: 162690, guid: 4d995d40ae6fd4179823d78c099e95c1, type: 2}
   z: 0
   carRate: 1
   tankRate: 1

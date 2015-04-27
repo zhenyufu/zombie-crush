@@ -7,13 +7,16 @@ public class ZombieFactory : MonoBehaviour {
 	public static float start = 20f; 
 	public static float width = 8.95f;
 
+	private ObjectPool objectPool;
+
+	/*
 	public GameObject zombieType1;
 	public GameObject zombieType2;
 	public GameObject zombieType3;
 	public GameObject zombieType4;
 	public GameObject zombieType5;
 	public GameObject zombieType6;
-
+*/
 	public float time = 3f;
 	public float widthOffset=1f;
 	public float spwanRange=2f;
@@ -26,6 +29,8 @@ public class ZombieFactory : MonoBehaviour {
 	private int functionCallTime=0;
 	// Use this for initialization
 	void Start () {
+		objectPool = GameObject.Find("MainCamera").GetComponent<ObjectPool>(); 
+
 		startTime = Time.time;
 		InvokeRepeating("makeZombie", 1f, time);
 		//plane = GameObject.Find("Plane");
@@ -90,8 +95,8 @@ public class ZombieFactory : MonoBehaviour {
 //				}
 		if (spwanRangeExtend + spwanRange < 2*width - widthOffset) {
 			for(int i=0;i<3;i++){
-						GameObject zombie = Instantiate (zombieType1) as GameObject;
-				zombie.transform.position = new Vector3 (Random.Range (width - spwanRange - spwanRangeExtend, width - spwanRangeExtend), 0.5f, Random.Range (start,start+5f));}
+				GameObject zombie = objectPool.takeOut("Zombie1");
+					zombie.transform.position = new Vector3 (Random.Range (width - spwanRange - spwanRangeExtend, width - spwanRangeExtend), 0.5f, Random.Range (start,start+5f));}
 		} 
 		else if ((spwanRangeExtend + spwanRange >= 2*width - widthOffset) && currentScore < 30) {//the spawn range has went beyond the width
 			for(int i=0;i<4;i++){
@@ -99,12 +104,12 @@ public class ZombieFactory : MonoBehaviour {
 			//print(type);
 						if (type == 1) {
 
-								GameObject zombie = Instantiate (zombieType1) as GameObject;
-				zombie.transform.position = new Vector3 (Random.Range (-width + widthOffset, 5f), 0.5f,Random.Range (start,start+5f));
+					GameObject zombie = objectPool.takeOut("Zombie1");
+					zombie.transform.position = new Vector3 (Random.Range (-width + widthOffset, 5f), 0.5f,Random.Range (start,start+5f));
 						} else if (type == 2) {
 
-								GameObject zombie = Instantiate (zombieType2) as GameObject;
-				zombie.transform.position = new Vector3 (Random.Range (-5f, width - widthOffset), 0.5f, Random.Range (start,start+5f));
+					GameObject zombie = objectPool.takeOut("Zombie2");
+					zombie.transform.position = new Vector3 (Random.Range (-5f, width - widthOffset), 0.5f, Random.Range (start,start+5f));
 			}
 			}
 		}
@@ -114,27 +119,27 @@ public class ZombieFactory : MonoBehaviour {
 			for(int i=0;i<numZombie;i++){
 				int type = Random.Range (2, 6);
 				if(type==2){
-				GameObject zombie = Instantiate (zombieType2) as GameObject;
+					GameObject zombie = objectPool.takeOut("Zombie2");
 				zombie.transform.position = new Vector3 (Random.Range (-width + widthOffset, width - widthOffset), 0.5f, Random.Range (start,start+10f));
 
 
 			}else if(type==3){
-				GameObject zombie = Instantiate (zombieType3) as GameObject;
+					GameObject zombie = objectPool.takeOut("Zombie3");
 				zombie.transform.position = new Vector3 (Random.Range (-width + widthOffset, width - widthOffset), 0.5f, Random.Range (start,start+10f));
 
 
 			}else if(type==4){
-				GameObject zombie = Instantiate (zombieType4) as GameObject;
+					GameObject zombie = objectPool.takeOut("Zombie4");
 				zombie.transform.position = new Vector3 (Random.Range (-width + widthOffset, width - widthOffset), 0.5f, Random.Range (start,start+10f));
 					
 					
 			}else if(type==5){
-				GameObject zombie = Instantiate (zombieType5) as GameObject;
+					GameObject zombie = objectPool.takeOut("Zombie5");
 				zombie.transform.position = new Vector3 (Random.Range (-width + widthOffset, width - widthOffset), 0.5f, Random.Range (start,start+10f));
 					
 					
 			}else if(type==6){
-				GameObject zombie = Instantiate (zombieType6) as GameObject;
+					GameObject zombie = objectPool.takeOut("Zombie6");
 				zombie.transform.position = new Vector3 (Random.Range (-width + widthOffset, width - widthOffset), 0.5f, Random.Range (start,start+10f));
 					
 					
