@@ -27,7 +27,7 @@ public class Tankfactory : MonoBehaviour {
 
 	public void addTank(int i){
 
-		currentInt += i*10;
+		currentInt += i*4;
 		if(currentInt >= 100){
 			currentInt = 100;
 			tankDisplay.SetActive (true);
