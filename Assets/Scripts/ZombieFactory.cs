@@ -117,7 +117,7 @@ public class ZombieFactory : MonoBehaviour {
 			functionCallTime++;
 			int numZombie=Mathf.FloorToInt( Mathf.Log(functionCallTime, 2));
 			for(int i=0;i<numZombie;i++){
-				int type = Random.Range (2, 6);
+				int type = Random.Range (2, 7);
 				if(type==2){
 					GameObject zombie = objectPool.takeOut("Zombie2");
 				zombie.transform.position = new Vector3 (Random.Range (-width + widthOffset, width - widthOffset), 0.5f, Random.Range (start,start+10f));
