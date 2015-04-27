@@ -9428,6 +9428,9 @@ MonoBehaviour:
   zombieType1: {fileID: 190292, guid: 631baffcab06d1c4ab6bbb8bdc9f4d4d, type: 2}
   zombieType2: {fileID: 175146, guid: 0897e662ecd4d5b4c89d4fa239a2fa4d, type: 2}
   zombieType3: {fileID: 138434, guid: 2a8b46cf1e9dc834ca5262300beee05a, type: 2}
+  zombieType4: {fileID: 146524, guid: 221b066d340907c49ab716ef9fbdab7c, type: 2}
+  zombieType5: {fileID: 123770, guid: b40ce3635caf8234dbf7ad6111fac789, type: 2}
+  zombieType6: {fileID: 122296, guid: bbfd4b9a5310b3142a62c61dbb8ec057, type: 2}
   time: 3
   widthOffset: 1
   spwanRange: 8
