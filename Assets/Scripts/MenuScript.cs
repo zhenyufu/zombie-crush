@@ -20,4 +20,7 @@ public class MenuScript: MonoBehaviour {
 	}
 
 
+	public void LoadMenu(){
+		Application.LoadLevel("MenuScene");
+	}
 }
