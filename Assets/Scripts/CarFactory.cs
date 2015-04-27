@@ -4,9 +4,7 @@ using UnityEngine.UI;
 
 public class CarFactory : MonoBehaviour {
 
-
-	public GameObject carPrefab;
-	public GameObject carPrefab2;
+	private ObjectPool objectPool;
 
 	public float z;
 
@@ -28,6 +26,7 @@ public class CarFactory : MonoBehaviour {
 
 
 	void Start () {
+		objectPool = GameObject.Find("MainCamera").GetComponent<ObjectPool>(); 
 		isleftSwipe = false;
 		isupSwipe = false;
 	}
@@ -76,7 +75,7 @@ public class CarFactory : MonoBehaviour {
 												ScoreBoard.fire ();
 
 												Vector3 newPosition = hit2.point;
-												GameObject car = Instantiate (carPrefab) as GameObject;
+												GameObject car = objectPool.takeOut("Car");
 												if (newPosition.z <= 20f && newPosition.z > 15f) {
 						
 														car.transform.position = new Vector3 (10f, offsetY, 17.5f);
@@ -168,7 +167,7 @@ public class CarFactory : MonoBehaviour {
 					currentTime = 0;
 					ScoreBoard.fire ();
 					Vector3 newPosition = hit.point;
-					GameObject carleft = Instantiate (carPrefab) as GameObject;
+						GameObject carleft = objectPool.takeOut("Car");
 					//car.transform.position=new Vector3(10f, 0f, z);
 					/*if(newPosition.z<=20f && newPosition.z>10f){
 				car.transform.position=new Vector3(10f, 0f, 15f);

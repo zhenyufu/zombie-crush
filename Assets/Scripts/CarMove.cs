@@ -3,6 +3,8 @@ using System.Collections;
 
 public class CarMove : MonoBehaviour
 {
+	private ObjectPool objectPool;
+
 	public GameObject bang;
 	public GameObject crispy;
 	public GameObject blast;
@@ -17,6 +19,7 @@ public class CarMove : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+		objectPool = GameObject.Find("MainCamera").GetComponent<ObjectPool>(); 
 		plane = GameObject.Find ("Plane");
 		collided = false;
 	}
@@ -30,7 +33,7 @@ public class CarMove : MonoBehaviour
 
 
 		if (transform.position.x < -13f) {
-			Destroy (this.gameObject); 			
+			objectPool.putIn(this.gameObject); 			
 		}
 		/*
 		if (collided) {
@@ -78,7 +81,8 @@ public class CarMove : MonoBehaviour
 
 			Destroy (collision.gameObject, 1.3f); 
 			AudioSource.PlayClipAtPoint (crash, collider.transform.position, 1f);
-			Destroy(this.gameObject,0.5f);
+			//Destroy(this.gameObject,0.5f);
+			objectPool.putIn(this.gameObject, 0.5f);
 			ScoreBoard.DestoyOneZombie ();
 			}
 			zmScript.afterCollide ();}

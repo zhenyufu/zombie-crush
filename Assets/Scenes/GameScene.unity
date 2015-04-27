@@ -2615,7 +2615,7 @@ GameObject:
   - 114: {fileID: 595291232}
   - 114: {fileID: 595291233}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: MainCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2778,10 +2778,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabArray:
-  - {fileID: 100040, guid: 1a66f8e1776d39341bd74f0c603e857d, type: 3}
-  - {fileID: 100050, guid: 929c85e3bb5c1ea4dbdfda6d3fe84ece, type: 3}
-  - {fileID: 100028, guid: a233dee6fbc9372459d03b424975465f, type: 3}
-  prefabAmount: 04000000040000000a000000
+  - {fileID: 190292, guid: 631baffcab06d1c4ab6bbb8bdc9f4d4d, type: 2}
+  - {fileID: 175146, guid: 0897e662ecd4d5b4c89d4fa239a2fa4d, type: 2}
+  - {fileID: 138434, guid: 2a8b46cf1e9dc834ca5262300beee05a, type: 2}
+  - {fileID: 146524, guid: 221b066d340907c49ab716ef9fbdab7c, type: 2}
+  - {fileID: 123770, guid: b40ce3635caf8234dbf7ad6111fac789, type: 2}
+  - {fileID: 122296, guid: bbfd4b9a5310b3142a62c61dbb8ec057, type: 2}
+  - {fileID: 131510, guid: da22257fc191fae419f9280a1987fa74, type: 2}
+  - {fileID: 125562, guid: 4adcf7b4657da4e71be0f46de2d1262c, type: 2}
+  - {fileID: 195204, guid: 9cdff9d50381a4572ad5a2727014416c, type: 2}
+  - {fileID: 143312, guid: d9560bb1223874db185274b338d38f64, type: 2}
+  - {fileID: 183956, guid: 6d26515787d254e54b515c9d27402382, type: 2}
+  - {fileID: 159778, guid: 3256ba2cc953444a0b903f90c415e732, type: 2}
+  - {fileID: 145644, guid: a9326d59752974f66bb9085b457b2d24, type: 2}
+  prefabAmount: 05000000050000000500000005000000050000000500000002000000020000000500000005000000050000000500000005000000
 --- !u!114 &595291233
 MonoBehaviour:
   m_ObjectHideFlags: 0

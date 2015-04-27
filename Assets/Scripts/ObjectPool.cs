@@ -3,8 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class ObjectPool : MonoBehaviour {
-	
-	public static int poolSize = 3;// amount of object pools
+
+	//0-5 zombie 1 -6
+	//6-7 car tank
+	//8-12 bangcombo signs
+	public static int poolSize = 13;// amount of object pools
 	public List<GameObject>[] pools = new List<GameObject>[poolSize];
 	
 	public GameObject[] prefabArray = new GameObject[poolSize];
@@ -13,7 +16,7 @@ public class ObjectPool : MonoBehaviour {
 	
 	
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		
 		for(int i = 0; i < poolSize; i++){
 			pools[i] = new List<GameObject>(); 
@@ -31,7 +34,21 @@ public class ObjectPool : MonoBehaviour {
 		obj.transform.parent = this.transform;
 		pools[getPosition(obj.name)].Add(obj);
 	}
-	
+
+	public void putIn(GameObject obj, float f){
+		StartCoroutine(myWait (obj, f));
+
+	}
+
+	IEnumerator myWait(GameObject obj, float f) {
+		print(Time.time);
+		yield return new WaitForSeconds(f);
+		print(Time.time);
+		obj.SetActive (false);
+		obj.transform.parent = this.transform;
+		pools[getPosition(obj.name)].Add(obj);
+	}
+
 	public GameObject takeOut(string name){
 		int i = getPosition (name);
 		
