@@ -35,6 +35,14 @@ public static class ScoreBoard {
 
 	public static void goBeyondBound(){
 		fuel -= 2;
+
+		//lose
+		if(ScoreBoard.CurrentFuel() < 0) {
+			//ScoreBoard.reload();
+			ScoreBoard.reload();
+			Application.LoadLevel("WinScene");
+		}
+
 		Displayui.refresh ();
 	}
 
