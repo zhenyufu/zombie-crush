@@ -13,9 +13,12 @@ public static class ScoreBoard {
 		score++;
 		fuel++;
 		Displayui.refresh();
-
 	}
-	
+	public static void TankZombie(){
+		score++;
+		Displayui.refresh();
+	}
+
 	public static int CurrentScore(){
 		return score;
 	}

@@ -1257,7 +1257,7 @@ MonoBehaviour:
   alright: {fileID: 159778, guid: 3256ba2cc953444a0b903f90c415e732, type: 2}
   sweet: {fileID: 145644, guid: a9326d59752974f66bb9085b457b2d24, type: 2}
   speed: 10
-  crash: {fileID: 8300000, guid: 256b3ef638e35e647ade49f7852a88b8, type: 3}
+  crash: {fileID: 8300000, guid: 0a116cf1052e7fb4d886c2cb0c4fa219, type: 3}
   comboCounter: 0
 --- !u!1001 &100100000
 Prefab:

@@ -437,6 +437,7 @@ GameObject:
   - 114: {fileID: 11425512}
   - 54: {fileID: 5425512}
   - 65: {fileID: 6555862}
+  - 82: {fileID: 8293228}
   m_Layer: 0
   m_Name: Tank
   m_TagString: Tank
@@ -1482,8 +1483,66 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7.0999999, y: 10.3000002, z: 10.6800003}
+  m_Size: {x: 9.19999981, y: 10.3000002, z: 10.6800003}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &8293228
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125562}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: a3868413c5e18e241bc56a2ea7931ada, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!95 &9525512
 Animator:
   serializedVersion: 3
@@ -1511,7 +1570,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  crash: {fileID: 8300000, guid: 256b3ef638e35e647ade49f7852a88b8, type: 3}
+  crash: {fileID: 8300000, guid: 0a116cf1052e7fb4d886c2cb0c4fa219, type: 3}
+  bang: {fileID: 195204, guid: 9cdff9d50381a4572ad5a2727014416c, type: 2}
+  crispy: {fileID: 143312, guid: d9560bb1223874db185274b338d38f64, type: 2}
+  blast: {fileID: 183956, guid: 6d26515787d254e54b515c9d27402382, type: 2}
+  alright: {fileID: 159778, guid: 3256ba2cc953444a0b903f90c415e732, type: 2}
+  sweet: {fileID: 145644, guid: a9326d59752974f66bb9085b457b2d24, type: 2}
+  comboCounter: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

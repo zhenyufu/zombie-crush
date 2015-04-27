@@ -10,6 +10,7 @@ public class Tankfactory : MonoBehaviour {
 	public GameObject tankDisplay;
 	public GameObject tankPrefab;
 	private float offsetY = 1.2f;
+	GameObject tank1, tank2;
 	// Use this for initialization
 	void Start () {
 		tankDisplay.SetActive (false);
@@ -34,14 +35,24 @@ public class Tankfactory : MonoBehaviour {
 	}
 
 	public void fireTank(){
-		GameObject tank1 = Instantiate (tankPrefab) as GameObject;
-		tank1.transform.position = new Vector3 (-4, offsetY, -20);
+		tank1 = Instantiate (tankPrefab) as GameObject;
+		tank1.transform.position = new Vector3 (-4.2f, offsetY, -20f);
 		
-		GameObject tank2 = Instantiate (tankPrefab) as GameObject;
-		tank2.transform.position = new Vector3 (4, offsetY, -20);
+		tank2 = Instantiate (tankPrefab) as GameObject;
+		tank2.transform.position = new Vector3 (4.2f, offsetY, -20f);
 
 		tankDisplay.SetActive (false);
 		tankReady = false;
+		currentInt = 0;
+		tankSlider.value = currentInt;
+	}
+
+
+	public bool checkClear(){
+		if (tank1 == null) {
+			return true;		
+		}
+		return false;
 	}
 
 

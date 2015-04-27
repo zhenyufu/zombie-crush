@@ -163,7 +163,7 @@ public class CarFactory : MonoBehaviour {
 				if(hit.transform.gameObject.tag == "TankUI"){
 					Camera.main.GetComponent<Tankfactory>().fireTank();
 				}
-				else{
+				else if(Camera.main.GetComponent<Tankfactory>().checkClear()){
 				if (currentTime >= carRate && ScoreBoard.CurrentFuel () > 0) {
 					currentTime = 0;
 					ScoreBoard.fire ();
