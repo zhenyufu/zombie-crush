@@ -1,0 +1,694 @@
+fileFormatVersion: 2
+guid: 11273df4cdc550f4dbd5de9f70c9a3e7
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Armature.004
+    100002: Armature.004|Bone
+    100004: Armature.004|Bone.001
+    100006: Cube.060
+    100008: Cube.061
+    100010: Cube.062
+    100012: Cube.063
+    100014: Cube.064
+    100016: Cube.065
+    100018: Cube.066
+    100020: Cube.067
+    100022: Cube.068
+    100024: Cube.069
+    100026: Cube.070
+    100028: Cube.071
+    100030: Cube.072
+    100032: Cube.073
+    100034: Cube.074
+    100036: Cube.075
+    100038: Cube.076
+    100040: Cube.077
+    100042: Cube.078
+    100044: Cube.079
+    100046: //RootNode
+    400000: Armature.004
+    400002: Armature.004|Bone
+    400004: Armature.004|Bone.001
+    400006: Cube.060
+    400008: Cube.061
+    400010: Cube.062
+    400012: Cube.063
+    400014: Cube.064
+    400016: Cube.065
+    400018: Cube.066
+    400020: Cube.067
+    400022: Cube.068
+    400024: Cube.069
+    400026: Cube.070
+    400028: Cube.071
+    400030: Cube.072
+    400032: Cube.073
+    400034: Cube.074
+    400036: Cube.075
+    400038: Cube.076
+    400040: Cube.077
+    400042: Cube.078
+    400044: Cube.079
+    400046: //RootNode
+    2300000: Cube.060
+    2300002: Cube.061
+    2300004: Cube.062
+    2300006: Cube.063
+    2300008: Cube.064
+    2300010: Cube.065
+    2300012: Cube.066
+    2300014: Cube.067
+    2300016: Cube.068
+    2300018: Cube.069
+    2300020: Cube.070
+    2300022: Cube.071
+    2300024: Cube.072
+    2300026: Cube.073
+    2300028: Cube.074
+    2300030: Cube.075
+    2300032: Cube.076
+    2300034: Cube.077
+    2300036: Cube.078
+    2300038: Cube.079
+    3300000: Cube.060
+    3300002: Cube.061
+    3300004: Cube.062
+    3300006: Cube.063
+    3300008: Cube.064
+    3300010: Cube.065
+    3300012: Cube.066
+    3300014: Cube.067
+    3300016: Cube.068
+    3300018: Cube.069
+    3300020: Cube.070
+    3300022: Cube.071
+    3300024: Cube.072
+    3300026: Cube.073
+    3300028: Cube.074
+    3300030: Cube.075
+    3300032: Cube.076
+    3300034: Cube.077
+    3300036: Cube.078
+    3300038: Cube.079
+    4300000: Cube.079
+    4300002: Cube.078
+    4300004: Cube.077
+    4300006: Cube.076
+    4300008: Cube.075
+    4300010: Cube.074
+    4300012: Cube.073
+    4300014: Cube.072
+    4300016: Cube.071
+    4300018: Cube.070
+    4300020: Cube.069
+    4300022: Cube.068
+    4300024: Cube.067
+    4300026: Cube.066
+    4300028: Cube.065
+    4300030: Cube.064
+    4300032: Cube.063
+    4300034: Cube.062
+    4300036: Cube.061
+    4300038: Cube.060
+    7400000: Armature.002Action.001
+    7400002: Armature.004|Armature.001Action.001
+    7400004: Armature.004|Armature.002Action
+    7400006: Armature.004|Armature.002Action.001
+    7400008: Armature.004|ArmatureAction
+    7400010: Armature.004|ArmatureAction.001
+    7400012: Armature.004|ArmatureAction.002
+    9500000: //RootNode
+    11100000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature.002Action.001
+      takeName: Armature.002Action.001
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature.004
+        weight: 1
+      - path: Armature.004/Armature.004|Bone
+        weight: 1
+      - path: Armature.004/Armature.004|Bone.001
+        weight: 1
+      - path: Armature.004/Cube.060
+        weight: 1
+      - path: Armature.004/Cube.061
+        weight: 1
+      - path: Armature.004/Cube.062
+        weight: 1
+      - path: Armature.004/Cube.063
+        weight: 1
+      - path: Cube.064
+        weight: 1
+      - path: Cube.065
+        weight: 1
+      - path: Cube.066
+        weight: 1
+      - path: Cube.067
+        weight: 1
+      - path: Cube.068
+        weight: 1
+      - path: Cube.069
+        weight: 1
+      - path: Cube.070
+        weight: 1
+      - path: Cube.071
+        weight: 1
+      - path: Cube.072
+        weight: 1
+      - path: Cube.073
+        weight: 1
+      - path: Cube.074
+        weight: 1
+      - path: Cube.075
+        weight: 1
+      - path: Cube.076
+        weight: 1
+      - path: Cube.077
+        weight: 1
+      - path: Cube.078
+        weight: 1
+      - path: Cube.079
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Armature.004|Armature.001Action.001
+      takeName: Armature.004|Armature.001Action.001
+      firstFrame: 0
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature.004
+        weight: 1
+      - path: Armature.004/Armature.004|Bone
+        weight: 1
+      - path: Armature.004/Armature.004|Bone.001
+        weight: 1
+      - path: Armature.004/Cube.060
+        weight: 1
+      - path: Armature.004/Cube.061
+        weight: 1
+      - path: Armature.004/Cube.062
+        weight: 1
+      - path: Armature.004/Cube.063
+        weight: 1
+      - path: Cube.064
+        weight: 1
+      - path: Cube.065
+        weight: 1
+      - path: Cube.066
+        weight: 1
+      - path: Cube.067
+        weight: 1
+      - path: Cube.068
+        weight: 1
+      - path: Cube.069
+        weight: 1
+      - path: Cube.070
+        weight: 1
+      - path: Cube.071
+        weight: 1
+      - path: Cube.072
+        weight: 1
+      - path: Cube.073
+        weight: 1
+      - path: Cube.074
+        weight: 1
+      - path: Cube.075
+        weight: 1
+      - path: Cube.076
+        weight: 1
+      - path: Cube.077
+        weight: 1
+      - path: Cube.078
+        weight: 1
+      - path: Cube.079
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Armature.004|Armature.002Action
+      takeName: Armature.004|Armature.002Action
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature.004
+        weight: 1
+      - path: Armature.004/Armature.004|Bone
+        weight: 1
+      - path: Armature.004/Armature.004|Bone.001
+        weight: 1
+      - path: Armature.004/Cube.060
+        weight: 1
+      - path: Armature.004/Cube.061
+        weight: 1
+      - path: Armature.004/Cube.062
+        weight: 1
+      - path: Armature.004/Cube.063
+        weight: 1
+      - path: Cube.064
+        weight: 1
+      - path: Cube.065
+        weight: 1
+      - path: Cube.066
+        weight: 1
+      - path: Cube.067
+        weight: 1
+      - path: Cube.068
+        weight: 1
+      - path: Cube.069
+        weight: 1
+      - path: Cube.070
+        weight: 1
+      - path: Cube.071
+        weight: 1
+      - path: Cube.072
+        weight: 1
+      - path: Cube.073
+        weight: 1
+      - path: Cube.074
+        weight: 1
+      - path: Cube.075
+        weight: 1
+      - path: Cube.076
+        weight: 1
+      - path: Cube.077
+        weight: 1
+      - path: Cube.078
+        weight: 1
+      - path: Cube.079
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Armature.004|Armature.002Action.001
+      takeName: Armature.004|Armature.002Action.001
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature.004
+        weight: 1
+      - path: Armature.004/Armature.004|Bone
+        weight: 1
+      - path: Armature.004/Armature.004|Bone.001
+        weight: 1
+      - path: Armature.004/Cube.060
+        weight: 1
+      - path: Armature.004/Cube.061
+        weight: 1
+      - path: Armature.004/Cube.062
+        weight: 1
+      - path: Armature.004/Cube.063
+        weight: 1
+      - path: Cube.064
+        weight: 1
+      - path: Cube.065
+        weight: 1
+      - path: Cube.066
+        weight: 1
+      - path: Cube.067
+        weight: 1
+      - path: Cube.068
+        weight: 1
+      - path: Cube.069
+        weight: 1
+      - path: Cube.070
+        weight: 1
+      - path: Cube.071
+        weight: 1
+      - path: Cube.072
+        weight: 1
+      - path: Cube.073
+        weight: 1
+      - path: Cube.074
+        weight: 1
+      - path: Cube.075
+        weight: 1
+      - path: Cube.076
+        weight: 1
+      - path: Cube.077
+        weight: 1
+      - path: Cube.078
+        weight: 1
+      - path: Cube.079
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Armature.004|ArmatureAction
+      takeName: Armature.004|ArmatureAction
+      firstFrame: 0
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature.004
+        weight: 1
+      - path: Armature.004/Armature.004|Bone
+        weight: 1
+      - path: Armature.004/Armature.004|Bone.001
+        weight: 1
+      - path: Armature.004/Cube.060
+        weight: 1
+      - path: Armature.004/Cube.061
+        weight: 1
+      - path: Armature.004/Cube.062
+        weight: 1
+      - path: Armature.004/Cube.063
+        weight: 1
+      - path: Cube.064
+        weight: 1
+      - path: Cube.065
+        weight: 1
+      - path: Cube.066
+        weight: 1
+      - path: Cube.067
+        weight: 1
+      - path: Cube.068
+        weight: 1
+      - path: Cube.069
+        weight: 1
+      - path: Cube.070
+        weight: 1
+      - path: Cube.071
+        weight: 1
+      - path: Cube.072
+        weight: 1
+      - path: Cube.073
+        weight: 1
+      - path: Cube.074
+        weight: 1
+      - path: Cube.075
+        weight: 1
+      - path: Cube.076
+        weight: 1
+      - path: Cube.077
+        weight: 1
+      - path: Cube.078
+        weight: 1
+      - path: Cube.079
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Armature.004|ArmatureAction.001
+      takeName: Armature.004|ArmatureAction.001
+      firstFrame: 0
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature.004
+        weight: 1
+      - path: Armature.004/Armature.004|Bone
+        weight: 1
+      - path: Armature.004/Armature.004|Bone.001
+        weight: 1
+      - path: Armature.004/Cube.060
+        weight: 1
+      - path: Armature.004/Cube.061
+        weight: 1
+      - path: Armature.004/Cube.062
+        weight: 1
+      - path: Armature.004/Cube.063
+        weight: 1
+      - path: Cube.064
+        weight: 1
+      - path: Cube.065
+        weight: 1
+      - path: Cube.066
+        weight: 1
+      - path: Cube.067
+        weight: 1
+      - path: Cube.068
+        weight: 1
+      - path: Cube.069
+        weight: 1
+      - path: Cube.070
+        weight: 1
+      - path: Cube.071
+        weight: 1
+      - path: Cube.072
+        weight: 1
+      - path: Cube.073
+        weight: 1
+      - path: Cube.074
+        weight: 1
+      - path: Cube.075
+        weight: 1
+      - path: Cube.076
+        weight: 1
+      - path: Cube.077
+        weight: 1
+      - path: Cube.078
+        weight: 1
+      - path: Cube.079
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Armature.004|ArmatureAction.002
+      takeName: Armature.004|ArmatureAction.002
+      firstFrame: 0
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature.004
+        weight: 1
+      - path: Armature.004/Armature.004|Bone
+        weight: 1
+      - path: Armature.004/Armature.004|Bone.001
+        weight: 1
+      - path: Armature.004/Cube.060
+        weight: 1
+      - path: Armature.004/Cube.061
+        weight: 1
+      - path: Armature.004/Cube.062
+        weight: 1
+      - path: Armature.004/Cube.063
+        weight: 1
+      - path: Cube.064
+        weight: 1
+      - path: Cube.065
+        weight: 1
+      - path: Cube.066
+        weight: 1
+      - path: Cube.067
+        weight: 1
+      - path: Cube.068
+        weight: 1
+      - path: Cube.069
+        weight: 1
+      - path: Cube.070
+        weight: 1
+      - path: Cube.071
+        weight: 1
+      - path: Cube.072
+        weight: 1
+      - path: Cube.073
+        weight: 1
+      - path: Cube.074
+        weight: 1
+      - path: Cube.075
+        weight: 1
+      - path: Cube.076
+        weight: 1
+      - path: Cube.077
+        weight: 1
+      - path: Cube.078
+        weight: 1
+      - path: Cube.079
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 
