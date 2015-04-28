@@ -1,13 +1,21 @@
 # README #
 
+### Versions ###
+
+* "Master" branch: Version with leaderboard included. Works with facebook token on pc; currently can't build to mobile because Android/IOS pro is needed to use "sockets".   
+
+* "clean" branch: Version used at presentation without leaderboard. Can be built to mobile.
 
 ### To Do ###
 [https://trello.com/b/Z7mr7inl/zombie-crush](https://trello.com/b/Z7mr7inl/zombie-crush)
 
 
+### Font ###
+*  http://www.dafont.com/
+
 ### Music###
 
-* DarkMystery from http://audionautix.com/
+* http://audionautix.com/
 
 
 ### Sound ###
@@ -16,14 +24,11 @@
 	Creative Commons 0 Licence
 
 	
-### BackGround ###
+### BackGround image ###
 
 * http://imgarcade.com/1/graveyard-png/
 
 * http://imgarcade.com/1/city-silhouette-vector/
-
-
-### Scene ###
 
 * http://www.clipartlord.com/free-cartoon-zombie-clip-art-3/
 
@@ -32,3 +37,9 @@
 * http://byrneworks.blogspot.com/
 
 * http://damonmath.blogspot.com/
+
+### Leaderboard ###
+
+* Gamerspark API
+
+* Facebook API
