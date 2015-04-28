@@ -2,7 +2,9 @@
 
 ### Versions ###
 
-* "Master" branch: Version with leaderboard included. Works with facebook token on pc; currently can't build to mobile because Android/IOS pro is needed to use "sockets".   
+* "Master" branch: Version with leaderboard included. 
+Works with facebook token on pc; currently can't build to mobile because Android/IOS pro is needed to use "sockets".   
+may experience "UnityEditor.DockArea.OnGUI ()" error due to Gamespark API on first play; can be ignored. 
 
 * "clean" branch: Version used at presentation without leaderboard. Can be built to mobile.
 
