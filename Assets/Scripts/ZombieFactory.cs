@@ -24,14 +24,14 @@ public class ZombieFactory : MonoBehaviour {
 	public float zRange=1f;
 	//public float exponentBase = 2f;
 	private float spwanRangeExtend;
-	private float startTime;
-	private int baseNum=0;
+	//private float startTime;
+	//private int baseNum=0;
 	private int functionCallTime=0;
 	// Use this for initialization
 	void Start () {
 		objectPool = GameObject.Find("MainCamera").GetComponent<ObjectPool>(); 
 
-		startTime = Time.time;
+		//startTime = Time.time;
 		InvokeRepeating("makeZombie", 1f, time);
 		//plane = GameObject.Find("Plane");
 		//start = 20f //start * plane.transform.localScale.z;

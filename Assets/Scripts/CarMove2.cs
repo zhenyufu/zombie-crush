@@ -7,13 +7,13 @@ public class CarMove2 : MonoBehaviour
 	public static GameObject plane;// = GameObject.Find("Plane");
 	public float speed = 4f;
 	public AudioClip crash;
-	bool collided;
+	//bool collided;
 	
 	// Use this for initialization
 	void Start ()
 	{
 		plane = GameObject.Find ("Plane");
-		collided = false;
+		//collided = false;
 	}
 	
 	// Update is called once per frame

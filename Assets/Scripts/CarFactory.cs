@@ -11,8 +11,8 @@ public class CarFactory : MonoBehaviour {
 	
 	private Vector2 startPos;
 	private Vector2 endPos;
-	private bool isleftSwipe;
-	private bool isupSwipe;
+	//private bool isleftSwipe;
+	//private bool isupSwipe;
 	public  float carRate=1f;
 	public float tankRate=1f;
 	//private float nextCar=0f;
@@ -28,8 +28,8 @@ public class CarFactory : MonoBehaviour {
 	
 	void Start () {
 		objectPool = GameObject.Find("MainCamera").GetComponent<ObjectPool>(); 
-		isleftSwipe = false;
-		isupSwipe = false;
+		//isleftSwipe = false;
+		//isupSwipe = false;
 	}
 	
 	
@@ -66,7 +66,7 @@ public class CarFactory : MonoBehaviour {
 			startPos = endPos;
 			if (touch.phase==TouchPhase.Ended) {
 				RaycastHit hit2;
-				Ray ray2 = Camera.main.ScreenPointToRay (startPos);
+				Ray ray2 = Camera.main.ScreenPointToRay (touch.position);
 				if (Physics.Raycast (ray2, out hit2)) {
 					if(hit2.transform.gameObject.tag == "TankUI"){
 						Camera.main.GetComponent<Tankfactory>().fireTank();
@@ -233,8 +233,8 @@ public class CarFactory : MonoBehaviour {
 			if (touch.phase == TouchPhase.Ended) {
 				startPos = Vector2.zero;
 				endPos = Vector2.zero;
-				isleftSwipe = false;
-				isupSwipe = false;
+				//isleftSwipe = false;
+				//isupSwipe = false;
 			}
 		} 
 		

@@ -6,7 +6,7 @@ public class Tankfactory : MonoBehaviour {
 
 	public Slider tankSlider;
 	private int currentInt = 0;
-	private bool tankReady = false;
+	//private bool tankReady = false;
 	public GameObject tankDisplay;
 	public GameObject tankPrefab;
 	private float offsetY = 1.2f;
@@ -31,7 +31,7 @@ public class Tankfactory : MonoBehaviour {
 		if(currentInt >= 100){
 			currentInt = 100;
 			tankDisplay.SetActive (true);
-			tankReady = true;
+			//tankReady = true;
 		}
 		tankSlider.value = currentInt;
 
@@ -45,7 +45,7 @@ public class Tankfactory : MonoBehaviour {
 		tank2.transform.position = new Vector3 (4.2f, offsetY, -25f);
 
 		tankDisplay.SetActive (false);
-		tankReady = false;
+		//tankReady = false;
 		currentInt = 0;
 		tankSlider.value = currentInt;
 	}
