@@ -9,8 +9,8 @@ public class CarFactory : MonoBehaviour {
 	
 	public float z;
 	
-	private Vector2 startPos;
-	private Vector2 endPos;
+	//private Vector2 startPos;
+	//private Vector2 endPos;
 	//private bool isleftSwipe;
 	//private bool isupSwipe;
 	public  float carRate=1f;
@@ -51,8 +51,8 @@ public class CarFactory : MonoBehaviour {
 			
 			Touch touch = Input.GetTouch (0);
 			if (touch.phase == TouchPhase.Began) {
-				startPos = touch.position;
-				endPos = touch.position;
+				//startPos = touch.position;
+				//endPos = touch.position;
 			}
 			if (touch.phase != TouchPhase.Ended  && touch.phase != TouchPhase.Canceled) {
 				holdTime+=Time.deltaTime;
@@ -63,7 +63,7 @@ public class CarFactory : MonoBehaviour {
 				}
 				
 			}
-			startPos = endPos;
+			//startPos = endPos;
 			if (touch.phase==TouchPhase.Ended) {
 				RaycastHit hit2;
 				Ray ray2 = Camera.main.ScreenPointToRay (touch.position);
@@ -231,8 +231,8 @@ public class CarFactory : MonoBehaviour {
 			
 			
 			if (touch.phase == TouchPhase.Ended) {
-				startPos = Vector2.zero;
-				endPos = Vector2.zero;
+				//startPos = Vector2.zero;
+				//endPos = Vector2.zero;
 				//isleftSwipe = false;
 				//isupSwipe = false;
 			}
