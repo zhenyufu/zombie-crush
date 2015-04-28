@@ -305,7 +305,7 @@ GameObject:
   - 54: {fileID: 5490258}
   - 82: {fileID: 8276778}
   m_Layer: 0
-  m_Name: Zombie1
+  m_Name: Zombie11
   m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

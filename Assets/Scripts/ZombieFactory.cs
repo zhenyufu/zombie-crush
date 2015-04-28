@@ -95,7 +95,7 @@ public class ZombieFactory : MonoBehaviour {
 //				}
 		if (spwanRangeExtend + spwanRange < 2*width - widthOffset) {
 			for(int i=0;i<3;i++){
-				GameObject zombie = objectPool.takeOut("Zombie1");
+				GameObject zombie = objectPool.takeOut("Zombie11");
 					zombie.transform.position = new Vector3 (Random.Range (width - spwanRange - spwanRangeExtend, width - spwanRangeExtend), 0.5f, Random.Range (start,start+5f));}
 		} 
 		else if ((spwanRangeExtend + spwanRange >= 2*width - widthOffset) && currentScore < 30) {//the spawn range has went beyond the width
@@ -104,11 +104,11 @@ public class ZombieFactory : MonoBehaviour {
 			//print(type);
 						if (type == 1) {
 
-					GameObject zombie = objectPool.takeOut("Zombie1");
+					GameObject zombie = objectPool.takeOut("Zombie12");
 					zombie.transform.position = new Vector3 (Random.Range (-width + widthOffset, 5f), 0.5f,Random.Range (start,start+5f));
 						} else if (type == 2) {
 
-					GameObject zombie = objectPool.takeOut("Zombie2");
+					GameObject zombie = objectPool.takeOut("Zombie22");
 					zombie.transform.position = new Vector3 (Random.Range (-5f, width - widthOffset), 0.5f, Random.Range (start,start+5f));
 			}
 			}
@@ -119,12 +119,12 @@ public class ZombieFactory : MonoBehaviour {
 			for(int i=0;i<numZombie;i++){
 				int type = Random.Range (2, 7);
 				if(type==2){
-					GameObject zombie = objectPool.takeOut("Zombie2");
+					GameObject zombie = objectPool.takeOut("Zombie22");
 				zombie.transform.position = new Vector3 (Random.Range (-width + widthOffset, width - widthOffset), 0.5f, Random.Range (start,start+10f));
 
 
 			}else if(type==3){
-					GameObject zombie = objectPool.takeOut("Zombie3");
+					GameObject zombie = objectPool.takeOut("Zombie33");
 				zombie.transform.position = new Vector3 (Random.Range (-width + widthOffset, width - widthOffset), 0.5f, Random.Range (start,start+10f));
 
 
