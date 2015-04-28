@@ -4,7 +4,6 @@
 ### To Do ###
 [https://trello.com/b/Z7mr7inl/zombie-crush](https://trello.com/b/Z7mr7inl/zombie-crush)
 
-
 ### Font###
 
 * from http://audionautix.com/
@@ -30,3 +29,8 @@
 * http://byrneworks.blogspot.com/
 
 * http://damonmath.blogspot.com/
+
+
+### 2 editions###
+Mater branch: Functional on laptop with facebook login and leaderboard (not working on mobile because of not have IOS/Android License)
+clean branch: Presentation version with the leaderboard taken out
