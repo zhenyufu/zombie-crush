@@ -5,25 +5,23 @@
 [https://trello.com/b/Z7mr7inl/zombie-crush](https://trello.com/b/Z7mr7inl/zombie-crush)
 
 
+### Font###
+
+* from http://audionautix.com/
+
 ### Music###
-
-* DarkMystery from http://audionautix.com/
-
+* http://www.dafont.com/
 
 ### Sound ###
 
 * https://www.freesound.org/
 	Creative Commons 0 Licence
-
 	
-### BackGround ###
+### BackGround images###
 
 * http://imgarcade.com/1/graveyard-png/
 
 * http://imgarcade.com/1/city-silhouette-vector/
-
-
-### Scene ###
 
 * http://www.clipartlord.com/free-cartoon-zombie-clip-art-3/
 
