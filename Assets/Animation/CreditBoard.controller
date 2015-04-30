@@ -8,13 +8,13 @@ AnimatorController:
   m_Name: CreditBoard
   serializedVersion: 2
   m_AnimatorParameters:
-  - m_Name: CFadeIn
+  - m_Name: FadeIn
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 1
     m_Controller: {fileID: 9100000}
-  - m_Name: CFadeOut
+  - m_Name: FadeOut
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -45,11 +45,11 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: CFadeOut
+    m_ConditionEvent: FadeOut
     m_EventTreshold: 0
     m_ExitTime: .75
   - m_ConditionMode: 2
-    m_ConditionEvent: CFadeIn
+    m_ConditionEvent: FadeIn
     m_EventTreshold: 0
     m_ExitTime: .75
   m_Atomic: 1
@@ -69,11 +69,11 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: CFadeIn
+    m_ConditionEvent: FadeIn
     m_EventTreshold: 0
     m_ExitTime: .75
   - m_ConditionMode: 2
-    m_ConditionEvent: CFadeOut
+    m_ConditionEvent: FadeOut
     m_EventTreshold: 0
     m_ExitTime: .75
   m_Atomic: 1
@@ -93,7 +93,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: CFadeIn
+    m_ConditionEvent: FadeIn
     m_EventTreshold: 0
     m_ExitTime: .75
   m_Atomic: 1

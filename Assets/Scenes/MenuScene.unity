@@ -212,9 +212,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 101827564}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59e9402e6c194c44bb350cbc81abbac1, type: 3}
+  m_Script: {fileID: 11500000, guid: a503d571f57a349498c16b5c8459efbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BackButton: {fileID: 1996410838}
 --- !u!1 &131523871
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,7 +617,7 @@ CanvasGroup:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 216091616}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -628,9 +629,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 216091616}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5013fbf98ce2b94986f75d5dfe502b7, type: 3}
+  m_Script: {fileID: 11500000, guid: a503d571f57a349498c16b5c8459efbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BackButton: {fileID: 1719057593}
 --- !u!1 &401481708
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,7 +919,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1247296283}
-        m_MethodName: TFadeIn
+        m_MethodName: FadeIn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1168,7 +1170,6 @@ GameObject:
   - 222: {fileID: 680360802}
   - 114: {fileID: 680360801}
   - 114: {fileID: 680360800}
-  - 114: {fileID: 680360803}
   m_Layer: 5
   m_Name: ScorePanel
   m_TagString: Untagged
@@ -1245,17 +1246,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 680360798}
---- !u!114 &680360803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 680360798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbd1750a5fc31cf45b894aa7dee50e0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &783649764
 GameObject:
   m_ObjectHideFlags: 0
@@ -1617,7 +1607,7 @@ CanvasGroup:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 886382071}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -1632,6 +1622,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9f40ea7c5ff3604fb3eaffe319c4d26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayButton: {fileID: 807487193}
+  LeaderBoardButton: {fileID: 1083680928}
+  TutorialButton: {fileID: 1358584795}
+  CreditButton: {fileID: 442404097}
 --- !u!95 &886382075
 Animator:
   serializedVersion: 3
@@ -1789,7 +1783,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1247296283}
-        m_MethodName: TFadeOut
+        m_MethodName: FadeOut
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2089,7 +2083,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 216091620}
-        m_MethodName: LLFadeIn
+        m_MethodName: FadeIn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2421,6 +2415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a503d571f57a349498c16b5c8459efbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BackButton: {fileID: 1019422698}
 --- !u!95 &1247296284
 Animator:
   serializedVersion: 3
@@ -2578,7 +2573,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 101827568}
-        m_MethodName: TFadeIn
+        m_MethodName: FadeIn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3165,7 +3160,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 216091620}
-        m_MethodName: LLFadeOut
+        m_MethodName: FadeOut
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3756,7 +3751,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 101827568}
-        m_MethodName: TFadeOut
+        m_MethodName: FadeOut
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3885,6 +3880,7 @@ GameObject:
   - 222: {fileID: 2036226669}
   - 114: {fileID: 2036226668}
   - 114: {fileID: 2036226667}
+  - 225: {fileID: 2036226670}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -3959,6 +3955,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2036226665}
+--- !u!225 &2036226670
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2036226665}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &2039001828
 GameObject:
   m_ObjectHideFlags: 0

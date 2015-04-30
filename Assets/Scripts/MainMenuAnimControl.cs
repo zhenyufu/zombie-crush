@@ -1,7 +1,13 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class MainMenuAnimControl : MonoBehaviour {
+
+	public Button PlayButton;
+	public Button LeaderBoardButton;
+	public Button TutorialButton;
+	public Button CreditButton;
 
 	private Animator MainMenuAnim;
 	private bool MainMenuOn = false;
@@ -28,6 +34,10 @@ public class MainMenuAnimControl : MonoBehaviour {
 			MainMenuAnim.SetBool("FadeOut", false);
 			MainMenuAnim.SetBool("FadeIn", true);
 			MainMenuOn = true;
+			PlayButton.enabled = true;
+			LeaderBoardButton.enabled = true;
+			TutorialButton.enabled = true;
+			CreditButton.enabled = true;
 		}
 	}
 
@@ -36,6 +46,10 @@ public class MainMenuAnimControl : MonoBehaviour {
 			MainMenuAnim.SetBool("FadeIn", false);
 			MainMenuAnim.SetBool("FadeOut", true);
 			MainMenuOn = false;
+			PlayButton.enabled = false;
+			LeaderBoardButton.enabled = false;
+			TutorialButton.enabled = false;
+			CreditButton.enabled = false;
 		}
 	}
 }
