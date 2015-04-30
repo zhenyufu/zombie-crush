@@ -29,10 +29,7 @@ public class CarFactory : MonoBehaviour
 	void Update ()
 	{
 		if ((ScoreBoard.CurrentFuel () <= 0) && GameObject.FindGameObjectWithTag ("Car") == null && (GameObject.FindGameObjectWithTag ("Tank")) == null) {
-			Debug.Log ("Before game ends");
-			print (ScoreBoard.CurrentScore ());
 			PostScores ("dummy", ScoreBoard.CurrentScore ());
-			Debug.Log ("Before load end scene");
 			ScoreBoard.reload ();
 			Application.LoadLevel ("WinScene");
 		}
