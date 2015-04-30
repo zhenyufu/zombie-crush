@@ -1170,6 +1170,7 @@ GameObject:
   - 222: {fileID: 680360802}
   - 114: {fileID: 680360801}
   - 114: {fileID: 680360800}
+  - 225: {fileID: 680360803}
   m_Layer: 5
   m_Name: ScorePanel
   m_TagString: Untagged
@@ -1246,6 +1247,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 680360798}
+--- !u!225 &680360803
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 680360798}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &783649764
 GameObject:
   m_ObjectHideFlags: 0
@@ -3599,6 +3611,7 @@ GameObject:
   - 222: {fileID: 1963050472}
   - 114: {fileID: 1963050471}
   - 114: {fileID: 1963050470}
+  - 225: {fileID: 1963050473}
   m_Layer: 5
   m_Name: RankPanel
   m_TagString: Untagged
@@ -3675,6 +3688,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1963050468}
+--- !u!225 &1963050473
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1963050468}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &1996410836
 GameObject:
   m_ObjectHideFlags: 0
@@ -4044,6 +4068,7 @@ GameObject:
   - 114: {fileID: 2051426735}
   - 114: {fileID: 2051426734}
   - 114: {fileID: 2051426737}
+  - 225: {fileID: 2051426738}
   m_Layer: 5
   m_Name: NamePanel
   m_TagString: Untagged
@@ -4153,6 +4178,17 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!225 &2051426738
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2051426732}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &2111196231
 GameObject:
   m_ObjectHideFlags: 0
