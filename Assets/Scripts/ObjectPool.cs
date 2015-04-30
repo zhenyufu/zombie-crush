@@ -63,7 +63,7 @@ public class ObjectPool : MonoBehaviour {
 
 	public GameObject takeOut(string name){
 		int i = getPosition (name);
-		
+		//print (name);
 		if(pools[i].Count > 0){
 			GameObject temp = pools[i][0];
 			pools[i].RemoveAt(0);

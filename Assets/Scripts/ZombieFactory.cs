@@ -104,7 +104,7 @@ public class ZombieFactory : MonoBehaviour {
 			//print(type);
 						if (type == 1) {
 
-					GameObject zombie = objectPool.takeOut("Zombie12");
+					GameObject zombie = objectPool.takeOut("Zombie11");
 					zombie.transform.position = new Vector3 (Random.Range (-width + widthOffset, 5f), 0.5f,Random.Range (start,start+5f));
 						} else if (type == 2) {
 
