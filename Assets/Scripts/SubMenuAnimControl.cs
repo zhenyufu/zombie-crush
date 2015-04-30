@@ -43,9 +43,13 @@ public class SubMenuAnimControl : MonoBehaviour {
 			Anim.SetBool("FadeIn", false);
 			Anim.SetBool("FadeOut", true);
 			On = false;
-			//yield return new WaitForSeconds(0.5f);
-			BackButton.active = false;
+			Invoke("DelayInacitveBackButton",1.0f);
+			//BackButton.active = false;
 			//BackButton.enabled = false;
 		}
+	}
+
+	public void DelayInacitveBackButton() {
+		BackButton.active = false;
 	}
 }
