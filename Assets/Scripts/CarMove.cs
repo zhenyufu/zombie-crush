@@ -84,7 +84,7 @@ public class CarMove : MonoBehaviour
 				//set constraint
 
 				objectPool.putIn(collision.gameObject, 1.3f);
-			AudioSource.PlayClipAtPoint (crash, collider.transform.position, 1f);
+			AudioSource.PlayClipAtPoint (crash, GetComponent<Collider>().transform.position, 1f);
 			//Destroy(this.gameObject,0.5f);
 			objectPool.putIn(this.gameObject, 0.5f);
 			ScoreBoard.DestoyOneZombie ();
@@ -133,9 +133,9 @@ public class CarMove : MonoBehaviour
 
 	  IEnumerator CarBlink ()
 	{
-		renderer.enabled = false;
+		GetComponent<Renderer>().enabled = false;
 		yield return new WaitForSeconds (0.5f);
-		renderer.enabled = true;
+		GetComponent<Renderer>().enabled = true;
 	}
 
 	void disableCollider()

@@ -18,7 +18,7 @@ public class ZombieMove : MonoBehaviour
 	}
 
 	void OnEnable(){
-		this.rigidbody.constraints =  RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+		this.GetComponent<Rigidbody>().constraints =  RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
 		transform.rotation = Quaternion.Euler(0, 180, 0);
 		collided = false;
 	}
@@ -48,7 +48,7 @@ public class ZombieMove : MonoBehaviour
 	public void afterCollide() {
 		if (!collided) {
 						collided = true;
-						rigidbody.constraints = RigidbodyConstraints.None;
+						GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
 				}
 	}
 

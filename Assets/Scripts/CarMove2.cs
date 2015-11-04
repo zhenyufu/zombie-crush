@@ -44,7 +44,7 @@ public class CarMove2 : MonoBehaviour
 			ZombieMove zmScript = collision.gameObject.GetComponent<ZombieMove> ();
 			zmScript.afterCollide ();
 			//
-			AudioSource.PlayClipAtPoint (crash, collider.transform.position, 1f);
+			AudioSource.PlayClipAtPoint (crash, GetComponent<Collider>().transform.position, 1f);
 			Destroy(this.gameObject,0.5f);
 			ScoreBoard.DestoyOneZombie ();
 		}
@@ -53,7 +53,7 @@ public class CarMove2 : MonoBehaviour
 			ZombieMove zmScript = collision.transform.parent.gameObject.GetComponent<ZombieMove> ();
 			zmScript.afterCollide ();
 			//
-			AudioSource.PlayClipAtPoint (crash, collider.transform.position, 1f);
+			AudioSource.PlayClipAtPoint (crash, GetComponent<Collider>().transform.position, 1f);
 			Destroy(this.gameObject,0.5f);
 			ScoreBoard.DestoyOneZombie ();
 		}
@@ -70,7 +70,7 @@ public class CarMove2 : MonoBehaviour
 		if (other.gameObject.tag == "Zombie") {
 			//disableCollider();
 			Debug.Log ("collide");
-			AudioSource.PlayClipAtPoint (crash, collider.transform.position, 1f);
+			AudioSource.PlayClipAtPoint (crash, GetComponent<Collider>().transform.position, 1f);
 			
 			//ZombieMove zmScript = other.GetComponent<ZombieMove> ();
 			//zmScript.afterCollide ();
@@ -90,9 +90,9 @@ public class CarMove2 : MonoBehaviour
 	
 	IEnumerator CarBlink ()
 	{
-		renderer.enabled = false;
+		GetComponent<Renderer>().enabled = false;
 		yield return new WaitForSeconds (0.5f);
-		renderer.enabled = true;
+		GetComponent<Renderer>().enabled = true;
 	}
 	
 	void disableCollider()

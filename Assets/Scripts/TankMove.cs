@@ -109,7 +109,7 @@ public class TankMove : MonoBehaviour {
 				objectPool.putIn(bangIns,0.6f);
 				
 				objectPool.putIn(collision.gameObject, 1.3f);
-				AudioSource.PlayClipAtPoint (crash, collider.transform.position, 1f);
+				AudioSource.PlayClipAtPoint (crash, GetComponent<Collider>().transform.position, 1f);
 				ScoreBoard.TankZombie ();
 			}
 			zmScript.afterCollide ();}
